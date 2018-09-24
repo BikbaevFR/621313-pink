@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Фяргать Бикбаев](https://up.htmlacademy.ru/adaptive/15/user/621313).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Позднякова](https://up.htmlacademy.ru/adaptive/15/user/5608).
 
 ---
 
