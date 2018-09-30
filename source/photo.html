@@ -126,30 +126,46 @@
     </section>
     <section class="upload-photo">
       <h2 class="visually-hidden">Загрузка и редактирование фотографий</h2>
-      <img class="upload-photo__image" src="http://placehold.it/150x100" width="150" height="150" alt="Загруженное фото">
-      <div class="upload-photo__photo-instruments photo-instruments">
-        <ul class="photo-instruments__list">
-          <li class="photo-instruments__item photo-instruments__item--crop">
-            <span class="visually-hidden">Обрезать</span>
+      <img class="upload-photo__image" src="http://placehold.it/150x100" width="150" height="150" alt="Загруженная фотография">
+      <form class="upload-photo__form" action="https://echo.htmlacademy.ru" method="get">
+        <ul class="upload-photo__list">
+          <li class="upload-photo__item">
+            <button class="upload-photo__instrument upload-photo__instrument--crop" type="button"><span class="visually-hidden">Обрезать</span></button>
+            <div class="upload-photo__range">
+              <div class="upload-photo__range-controls">
+                <div class="upload-photo__range-scale">
+                  <div class="upload-photo__range-bar"></div>
+                </div>
+                <div class="upload-photo__range-toggle"></div>
+              </div>
+            </div>
           </li>
-          <li class="photo-instruments__item photo-instruments__item--fill">
-            <span class="visually-hidden">Заливка</span>
+          <li class="upload-photo__item">
+            <button class="upload-photo__instrument upload-photo__instrument--fill" type="button"><span class="visually-hidden">Заливка</span></button>
+            <div class="upload-photo__range">
+              <div class="upload-photo__range-controls">
+                <div class="upload-photo__range-scale">
+                  <div class="upload-photo__range-bar"></div>
+                </div>
+                <div class="upload-photo__range-toggle"></div>
+              </div>
+            </div>
           </li>
-          <li class="photo-instruments__item photo-instruments__item--contrast">
-            <span class="visually-hidden">Контрастность</span>
+          <li class="upload-photo__item">
+            <button class="upload-photo__instrument upload-photo__instrument--contrast" type="button"><span class="visually-hidden">Контрастность</span></button>
+            <div class="upload-photo__range">
+              <div class="upload-photo__range-controls">
+                <div class="upload-photo__range-scale">
+                  <div class="upload-photo__range-bar"></div>
+                </div>
+                <div class="upload-photo__range-toggle"></div>
+              </div>
+            </div>
           </li>
         </ul>
-        <div class="photo-instruments__range range">
-          <div class="range__controls">
-            <div class="range__scale">
-              <div class="range__bar"></div>
-            </div>
-            <div class="range__range-toggle"></div>
-          </div>
-        </div>
-      </div>
-      <a class="upload-photo__post button button--pink" href="#">Запостить</a>
-      <a class="upload-photo__cancel button button--gray" href="#">Отмена</a>
+        <button class="upload-photo__post button button--pink" type="submit">Запостить</button>
+        <button class="upload-photo__cancel button button--gray" type="reset">Отмена</button>
+      </form>
     </section>
   </main>
   <footer class="page-footer">
