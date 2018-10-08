@@ -1,0 +1,65 @@
+.upload-photo {
+  width: 320px;
+
+  background-color: @white--dark;
+}
+
+.upload-photo__list {
+  .reset-list();
+}
+
+.upload-photo__instrument {
+  position: relative;
+  /* Временно */
+  margin-bottom: 30px;
+
+  border: none;
+}
+
+.upload-photo__instrument::before {
+  position: absolute;
+
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.upload-photo__instrument--crop::before {
+  content: url("../img/icon-editor-crop.svg");
+}
+
+.upload-photo__instrument--fill::before {
+  content: url("../img/icon-editor-fill.svg");
+}
+
+.upload-photo__instrument--contrast::before {
+  content: url("../img/icon-editor-contrast.svg");
+}
+
+.upload-photo__range {
+  width: 240px;
+}
+
+.upload-photo__range-controls {
+  position: relative;
+}
+
+.upload-photo__range-scale {
+  height: 2px;
+
+  background-color: #283645;
+}
+
+.upload-photo__range-toggle {
+  position: absolute;
+  top: -6px;
+  left: 85%;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: @white--dark;
+  border: 2px solid @pink;
+  border-radius: 50%;
+
+  cursor: pointer;
+}

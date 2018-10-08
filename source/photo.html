@@ -4,42 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Фотографии пользователей</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
-    <div class="page-footer__logo logo">
-      <a class="logo__link logo__link--header" href="index.html">Pink</a>
-    </div>
+    <a class="page-header__logo-link" href="index.html">
+      <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Приложение «Пинк»">
+    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--close" type="button">Открыть/Закрыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a href="index.html">Главная</a>
+            <a class="site-list__link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
-            <a>Фотографии</a>
+            <a class="site-list__link">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Конкурс</a>
+            <a class="site-list__link" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a class="site-list__link" href="#">HTML Academy</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
-  <main class="page-main">
-    <h1 class="page-main__page-title">Фотографии пользователей</h1>
+  <main class="inner-main">
+    <div class="inner-main__title-background">
+      <h1 class="inner-main__title">Фотографии пользователей</h1>
+    </div>
     <section class="photo">
       <h2 class="visually-hidden">Лента фотографий пользователей</h2>
-      <p class="photo__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      <p class="photo__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       <div class="photo__list">
         <figure class="photo__item user-block user-block--panorama">
           <p class="user-block__picture">
-            <img class="user-block__image" src="http://placehold.it/150x100" width="150" height="150" alt="Фото пользователя Анны">
+            <img class="user-block__image" src="img/panorama-mobile@1x.jpg" width="320" height="127" alt="Фото пользователя Анны">
           </p>
           <figcaption class="user-block__comment">
             <cite class="user-block__name">Анна</cite>
@@ -51,7 +54,7 @@
         </figure>
         <figure class="photo__item user-block">
           <p class="user-block__picture">
-            <img class="user-block__image" src="http://placehold.it/150x100" width="150" height="150" alt="Фото пользователя Левона">
+            <img class="user-block__image" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Левона">
           </p>
           <figcaption class="user-block__comment">
             <cite class="user-block__name">Левон</cite>
@@ -63,7 +66,7 @@
         </figure>
         <figure class="photo__item user-block">
           <p class="user-block__picture">
-            <img class="user-block__image" src="http://placehold.it/150x100" width="150" height="150" alt="Фото пользователя Антона">
+            <img class="user-block__image" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Антона">
           </p>
           <figcaption class="user-block__comment">
             <cite class="user-block__name">Антон</cite>
@@ -75,7 +78,7 @@
         </figure>
         <figure class="photo__item user-block">
           <p class="user-block__picture">
-            <img class="user-block__image" src="http://placehold.it/150x100" width="150" height="150" alt="Фото пользователя Бориса">
+            <img class="user-block__image" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Бориса">
           </p>
           <figcaption class="user-block__comment">
             <cite class="user-block__name">Борис</cite>
@@ -87,7 +90,7 @@
         </figure>
         <figure class="photo__item user-block">
           <p class="user-block__picture">
-            <img class="user-block__image" src="http://placehold.it/150x100" width="150" height="150" alt="Фото пользователя Сергея">
+            <img class="user-block__image" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Сергея">
           </p>
           <figcaption class="user-block__comment">
             <cite class="user-block__name">Сергей</cite>
@@ -99,7 +102,7 @@
         </figure>
         <figure class="photo__item user-block">
           <p class="user-block__picture">
-            <img class="user-block__image" src="http://placehold.it/150x100" width="150" height="150" alt="Фото пользователя Максима">
+            <img class="user-block__image" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Максима">
           </p>
           <figcaption class="user-block__comment">
             <cite class="user-block__name">Максим</cite>
@@ -111,7 +114,7 @@
         </figure>
         <figure class="photo__item user-block">
           <p class="user-block__picture">
-            <img class="user-block__image" src="http://placehold.it/150x100" width="150" height="150" alt="Фото пользователя Надежды">
+            <img class="user-block__image" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Надежды">
           </p>
           <figcaption class="user-block__comment">
             <cite class="user-block__name">Надежда</cite>
@@ -122,11 +125,12 @@
           </figcaption>
         </figure>
       </div>
-      <p class="photo__closing">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+      <p class="photo__text">Затмите их всех!</p>
+      <p class="photo__text">Выкладывайте все, что накопилось в телефоне!</p>
     </section>
     <section class="upload-photo">
       <h2 class="visually-hidden">Загрузка и редактирование фотографий</h2>
-      <img class="upload-photo__image" src="http://placehold.it/150x100" width="150" height="150" alt="Загруженная фотография">
+      <img class="upload-photo__image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Загруженная фотография">
       <form class="upload-photo__form" action="https://echo.htmlacademy.ru" method="get">
         <ul class="upload-photo__list">
           <li class="upload-photo__item">
@@ -168,12 +172,12 @@
       </form>
     </section>
   </main>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <div class="page-footer__logo logo">
-        <a class="logo__link logo__link--image logo__link--footer" href="index.html">Pink</a>
-      </div>
-      <div class="page-footer__social social">
+  <footer class="inner-footer">
+    <div class="inner-footer__wrapper">
+      <a class="inner-footer__logo-link" href="index.html">
+        <img class="inner-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Приложение «Пинк»">
+      </a>
+      <div class="inner-footer__social social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank"><span class="visually-hidden">Мы в Твиттере</span></a>
@@ -186,7 +190,7 @@
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright copyright">
+      <div class="inner-footer__copyright copyright">
         <b class="copyright__text">Разработано:</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">HTML Academy</span></a>
       </div>

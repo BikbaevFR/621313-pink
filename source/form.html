@@ -4,35 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Конкурс на самое безбашенное путешествие с Пинк</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
-    <div class="page-footer__logo logo">
-      <a class="logo__link logo__link--header" href="index.html">Pink</a>
-    </div>
+    <a class="page-header__logo-link" href="index.html">
+      <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Приложение «Пинк»">
+    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--close" type="button">Открыть/Закрыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a href="index.html">Главная</a>
+            <a class="site-list__link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
+            <a class="site-list__link" href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a>Конкурс</a>
+            <a class="site-list__link">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+            <a class="site-list__link" href="#">HTML Academy</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
-  <main class="page-main">
-    <h1 class="page-title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+  <main class="inner-main">
+    <div class="inner-main__title-background">
+      <h1 class="inner-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    </div>
     <section class="form-contest">
       <h2 class="visually-hidden">Форма для участия в конкурсе</h2>
       <p class="form-contest__intro">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
@@ -54,7 +57,7 @@
           </ul>
         </fieldset>
         <fieldset class="form__block">
-          <legend class="form__title-item">Ваши безбашенные достижения в путешествии</legend>
+          <legend class="form__title-item form__title-item--line-height">Ваши безбашенные достижения в путешествии</legend>
           <ul class="form__list">
             <li class="form__item">
               <label class="form__field form__field--checkbox" for="shark">Сделал селфи с акулой</label>
@@ -90,12 +93,12 @@
             </li>
             <li>
               <label class="form__title-item" for="email">Адрес почты</label>
-              <input class="form__text" id="email" type="email" name="form-email" placeholder="Введите почту*" required>
+              <input class="form__text" id="email" type="email" name="form-email" placeholder="Введите почту *" required>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__block">
-          <legend class="form__title-item">С каким приложением путешествовали?</legend>
+          <legend class="form__title-item form__title-item--line-height">С каким приложением путешествовали?</legend>
           <ul class="form__list">
             <li class="form__item">
               <label class="form__field form__field--radio" for="os-win">Pink для iOS</label>
@@ -115,19 +118,19 @@
           <label class="form__title-item" for="emotions">Опишите свои эмоции</label>
           <textarea class="form__text" id="emotions" name="text" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </p>
-        <button class="form__button button-form" type="submit">Отправить форму</button>
+        <button class="form__button button button--form" type="submit">Отправить форму</button>
       </form>
       <small class="form-contest__legend">
-          <sup>*</sup> — обязательные поля
+          <sup class="form-contest__legend-star">*</sup> — обязательные поля
       </small>
     </section>
   </main>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <div class="page-footer__logo logo">
-        <a class="logo__link logo__link--image logo__link--footer" href="index.html">Pink</a>
-      </div>
-      <div class="page-footer__social social">
+  <footer class="inner-footer">
+    <div class="inner-footer__wrapper">
+      <a class="inner-footer__logo-link" href="index.html">
+        <img class="inner-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Приложение «Пинк»">
+      </a>
+      <div class="inner-footer__social social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank"><span class="visually-hidden">Мы в Твиттере</span></a>
@@ -140,7 +143,7 @@
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright copyright">
+      <div class="inner-footer__copyright copyright">
         <b class="copyright__text">Разработано:</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">HTML Academy</span></a>
       </div>
@@ -150,13 +153,13 @@
     <h2 class="visually-hidden">Отказ отправить форму</h2>
     <b class="modal__intro">Что-то пошло не так!</b>
     <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-    <button class="modal__button button-form" type="button">Ок</button>
+    <button class="modal__button button button--form" type="button">Ок</button>
   </section>
   <section class="modal modal--dispatch">
     <h2 class="visually-hidden">Отправка формы</h2>
     <b class="modal__intro">Ваша заявка отправлена</b>
     <p class="modal__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-    <button class="modal__button button-form" type="button">Закрыть окно</button>
+    <button class="modal__button button button--form" type="button">Закрыть окно</button>
   </section>
 </body>
 
