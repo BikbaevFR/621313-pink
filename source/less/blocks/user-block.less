@@ -3,12 +3,7 @@
 
   width: 320px;
 
-  font-family: "Opensans", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  color: #283645;
-
-  background-color: #f2f2f2;
+  background-color: @white--dark;
 }
 
 .user-block--panorama::before {
@@ -21,15 +16,15 @@
   width: 140px;
   height: 36px;
 
-  font-family: "Opensans", "Arial", sans-serif;
+  font-family: @default-font;
   font-size: 12px;
   font-weight: 700;
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
+  color: @white;
 
-  background-color: #d22856;
+  background-color: @pink;
 }
 
 .user-block__name {
@@ -43,10 +38,6 @@
   text-transform: uppercase;
 }
 
-.user-block__text {
-  font-weight: 400;
-}
-
 .user-block__like {
   position: relative;
 
@@ -54,7 +45,7 @@
 }
 
 .user-block__like::before {
-  content: url("../../img/icon-heart.svg");
+  content: url("../img/icon-heart.svg");
 
   position: absolute;
   left: 50%;
@@ -67,7 +58,5 @@
 
 .user-block__inscription {
   font-size: 12px;
-  font-weight: 400;
   text-transform: uppercase;
-  color: #d22856;
 }
