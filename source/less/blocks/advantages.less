@@ -19,3 +19,20 @@
   font-weight: 700;
   color: @black;
 }
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    width: 620px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    width: 940px;
+  }
+
+  .advantages__list {
+    display: flex;
+    justify-content: center;
+  }
+}
