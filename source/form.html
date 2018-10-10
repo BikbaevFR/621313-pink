@@ -10,12 +10,12 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo-link" href="index.html">
-      <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Приложение «Пинк»">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--close" type="button">Открыть/Закрыть меню</button>
-      <div class="main-nav__wrapper">
+    <div class="page-header__wrapper">
+      <nav class="page-header__main-nav main-nav main-nav--closed">
+        <header class="main-nav__top">
+          <a class="main-nav__logo-link" href="index.html"><img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Приложение «Пинк»"></a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/Закрыть меню</span></button>
+        </header>
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
             <a class="site-list__link" href="index.html">Главная</a>
@@ -23,15 +23,15 @@
           <li class="site-list__item">
             <a class="site-list__link" href="photo.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a class="site-list__link">Конкурс</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="#">HTML Academy</a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
   <main class="inner-main">
     <div class="inner-main__title-background">
