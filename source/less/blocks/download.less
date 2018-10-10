@@ -13,6 +13,7 @@
 
 .download__slogan {
   display: none;
+  margin: 0;
 
   font-size: 40px;
 }
@@ -55,8 +56,11 @@
   background-image: url("../img/logo-microsoft.svg");
 }
 
-@media (min-width: @tablet-width) {
+.download__text {
+  margin: 0;
+}
 
+@media (min-width: @tablet-width) {
   .download {
     display: flex;
     width: 620px;
@@ -77,7 +81,6 @@
 }
 
 @media (min-width: @desktop-width) {
-
   .download {
     width: 940px;
   }
