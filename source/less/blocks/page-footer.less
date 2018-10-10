@@ -6,9 +6,18 @@
   line-height: auto;
 }
 
+.page-footer__inner-footer {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .page-footer {
     width: 620px;
+  }
+
+  .page-footer__inner-footer {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
