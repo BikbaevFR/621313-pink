@@ -1,7 +1,7 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  // width: 320px;
+  width: 320px;
 
   color: @white;
 
@@ -13,9 +13,16 @@
   height: 22px;
 }
 
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 620px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .page-header {
     flex-direction: row;
     justify-content: space-between;
+    width: 940px;
   }
 }

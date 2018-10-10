@@ -74,26 +74,11 @@
   .download__slogan {
     display: block;
   }
+}
 
-  .stats__header {
-    position: relative;
+@media (min-width: @desktop-width) {
 
-    min-height: 129px;
-
-    &::before {
-      content: "";
-
-      position: absolute;
-      top: 27px;
-      left: -15px;
-
-      border: 15px solid transparent;
-      border-bottom-color: #ffffff;
-      transform: rotate(45deg);
-    }
-  }
-
-  .stats__list {
-    display: flex;
+  .download {
+    width: 940px;
   }
 }
