@@ -11,8 +11,18 @@
   background-repeat: no-repeat;
 }
 
+.download__slogan {
+  display: none;
+
+  font-size: 40px;
+}
+
 .download__list {
   .reset-list();
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .download__link::before {
@@ -43,4 +53,47 @@
   height: 41px;
 
   background-image: url("../img/logo-microsoft.svg");
+}
+
+@media (min-width: @tablet-width) {
+
+  .download {
+    display: flex;
+    width: 620px;
+  }
+
+  .download__image {
+    order: 2;
+  }
+
+  .download__box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .download__slogan {
+    display: block;
+  }
+
+  .stats__header {
+    position: relative;
+
+    min-height: 129px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 27px;
+      left: -15px;
+
+      border: 15px solid transparent;
+      border-bottom-color: #ffffff;
+      transform: rotate(45deg);
+    }
+  }
+
+  .stats__list {
+    display: flex;
+  }
 }
