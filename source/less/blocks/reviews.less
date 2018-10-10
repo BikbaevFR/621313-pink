@@ -7,5 +7,41 @@
 .reviews__author-name {
   font-size: 18px;
   font-weight: 700;
+  font-style: normal;
   color: @black;
 }
+
+.reviews__author-info {
+  display: none;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: @blue-dark;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    width: 620px;
+  }
+
+  .reviews__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews__author-name {
+    order: 2;
+  }
+
+  .reviews__author-info {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    width: 940px;
+  }
+}
+
+
