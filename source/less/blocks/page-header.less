@@ -1,7 +1,20 @@
 .page-header {
-  width: 320px;
+  display: flex;
+  flex-direction: column;
+  // width: 320px;
 
   color: @white;
 
   background-color: @blue-dark;
+}
+
+.page-header__logo-link {
+  align-self: flex-start;
+  height: 22px;
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    flex-direction: row;
+  }
 }
