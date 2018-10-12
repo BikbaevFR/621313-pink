@@ -1,7 +1,9 @@
 .price {
-  width: 320px;
-
   background-color: @white--dark;
+}
+
+.price__wrapper {
+  .wrapper();
 }
 
 .price__list {
@@ -33,15 +35,14 @@
   margin: 0;
 }
 
-// Нужна подсказка по перестроению таблицы
 @media (min-width: @tablet-width) {
   .price {
-    width: 620px;
+    // width: 620px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .price {
-    width: 940px;
+    // width: 940px;
   }
 }
