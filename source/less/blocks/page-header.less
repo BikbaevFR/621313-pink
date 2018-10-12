@@ -1,28 +1,13 @@
 .page-header {
   position: relative;
-
-  width: 320px;
-  margin-bottom: -1px;
-  /* Временно */
   min-height: 465px;
 
   color: @white;
 
   background-color: @blue-dark;
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: 0 0;
+  background-position: 50% 0%;
   background-repeat: no-repeat;
-}
-
-.page-header::after {
-  content: url("../img/iphone-hand-mobile@1x.png");
-
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  width: 258px;
-  height: 286px;
 }
 
 .page-header__wrapper {
@@ -33,14 +18,7 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    position: relative;
-    top: 0;
-    left: calc(~"-50vw + 50%");
-
-    width: 100vw;
     min-height: 730px;
-    margin-bottom: -540px;
-
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: 50% 0%;
   }
@@ -49,10 +27,6 @@
     background-color: rgba(0, 0, 0, 0.3);
 
     min-height: 110px;
-  }
-
-  .page-header::after {
-    display: none;
   }
 }
 
