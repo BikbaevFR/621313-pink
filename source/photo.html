@@ -36,96 +36,132 @@
   </header>
   <main class="inner-main">
     <section class="photo">
-      <h2 class="visually-hidden">Лента фотографий пользователей</h2>
-      <p class="photo__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-      <div class="photo__list">
-        <figure class="photo__item user-block user-block--panorama">
-          <p class="user-block__picture">
-            <img class="user-block__image" src="img/panorama-mobile@1x.jpg" width="320" height="127" alt="Фото пользователя Анны">
-          </p>
-          <figcaption class="user-block__comment">
-            <cite class="user-block__name">Анна</cite>
-            <time class="user-block__date" datetime="2018-09-28">(5 минут назад)</time>
-            <p class="user-block__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
-            <span class="user-block__inscription">Нравится: 215</span>
-          </figcaption>
-        </figure>
-        <figure class="photo__item user-block">
-          <p class="user-block__picture">
-            <img class="user-block__image" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Левона">
-          </p>
-          <figcaption class="user-block__comment">
-            <cite class="user-block__name">Левон</cite>
-            <time class="user-block__date" datetime="2018-09-28">(5 часов назад)</time>
-            <p class="user-block__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
-            <span class="user-block__inscription">Нравится: 356</span>
-          </figcaption>
-        </figure>
-        <figure class="photo__item user-block">
-          <p class="user-block__picture">
-            <img class="user-block__image" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Антона">
-          </p>
-          <figcaption class="user-block__comment">
-            <cite class="user-block__name">Антон</cite>
-            <time class="user-block__date" datetime="2018-09-28">(12 часов назад)</time>
-            <p class="user-block__text">Соседи будут рады!</p>
-            <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
-            <span class="user-block__inscription">Нравится: 666</span>
-          </figcaption>
-        </figure>
-        <figure class="photo__item user-block">
-          <p class="user-block__picture">
-            <img class="user-block__image" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Бориса">
-          </p>
-          <figcaption class="user-block__comment">
-            <cite class="user-block__name">Борис</cite>
-            <time class="user-block__date" datetime="2018-09-27">(20 часов назад)</time>
-            <p class="user-block__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
-            <span class="user-block__inscription">Нравится: 215</span>
-          </figcaption>
-        </figure>
-        <figure class="photo__item user-block">
-          <p class="user-block__picture">
-            <img class="user-block__image" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Сергея">
-          </p>
-          <figcaption class="user-block__comment">
-            <cite class="user-block__name">Сергей</cite>
-            <time class="user-block__date" datetime="2018-09-27">(25 часов назад)</time>
-            <p class="user-block__text">Самая кубанская в мире!</p>
-            <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
-            <span class="user-block__inscription">Нравится: 4</span>
-          </figcaption>
-        </figure>
-        <figure class="photo__item user-block">
-          <p class="user-block__picture">
-            <img class="user-block__image" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Максима">
-          </p>
-          <figcaption class="user-block__comment">
-            <cite class="user-block__name">Максим</cite>
-            <time class="user-block__date" datetime="2018-09-27">(40 часов назад)</time>
-            <p class="user-block__text">Где снег-то?</p>
-            <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
-            <span class="user-block__inscription">Нравится: 150</span>
-          </figcaption>
-        </figure>
-        <figure class="photo__item user-block">
-          <p class="user-block__picture">
-            <img class="user-block__image" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фото пользователя Надежды">
-          </p>
-          <figcaption class="user-block__comment">
-            <cite class="user-block__name">Надежда</cite>
-            <time class="user-block__date" datetime="2018-09-26">(45 часов назад)</time>
-            <p class="user-block__text">Всем GM и взаимные лайки!</p>
-            <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
-            <span class="user-block__inscription">Нравится: 2560</span>
-          </figcaption>
-        </figure>
+      <div class="photo__wrapper">
+        <h2 class="visually-hidden">Лента фотографий пользователей</h2>
+        <p class="photo__text photo__text--top">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <div class="photo__list">
+          <div class="photo__list-head">
+            <figure class="photo__item user-block user-block--panorama">
+              <p class="user-block__picture">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg">
+                  <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg">
+                  <img class="user-block__image" src="img/panorama-mobile@1x.jpg" alt="Фото пользователя Анны">
+                </picture>
+              </p>
+              <figcaption class="user-block__comment">
+                <cite class="user-block__name">Анна</cite>
+                <time class="user-block__date" datetime="2018-09-28">(5 минут назад)</time>
+                <p class="user-block__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <p class="user-block__bottom">
+                  <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
+                  <span class="user-block__inscription">Нравится: 215</span>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="photo__list-body">
+            <figure class="photo__item user-block">
+              <p class="user-block__picture">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg">
+                  <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg">
+                  <img class="user-block__image" src="img/photo-car-mobile@1x.jpg" alt="Фото пользователя Левона">
+                </picture>
+              </p>
+              <figcaption class="user-block__comment">
+                <cite class="user-block__name">Левон</cite>
+                <time class="user-block__date" datetime="2018-09-28">(5 часов назад)</time>
+                <p class="user-block__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
+                <span class="user-block__inscription">Нравится: 356</span>
+              </figcaption>
+            </figure>
+            <figure class="photo__item user-block">
+              <p class="user-block__picture">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg">
+                  <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg">
+                  <img class="user-block__image" src="img/photo-drumset-mobile@1x.jpg" alt="Фото пользователя Антона">
+                </picture>
+              </p>
+              <figcaption class="user-block__comment">
+                <cite class="user-block__name">Антон</cite>
+                <time class="user-block__date" datetime="2018-09-28">(12 часов назад)</time>
+                <p class="user-block__text">Соседи будут рады!</p>
+                <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
+                <span class="user-block__inscription">Нравится: 666</span>
+              </figcaption>
+            </figure>
+            <figure class="photo__item user-block">
+              <p class="user-block__picture">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg">
+                  <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg">
+                  <img class="user-block__image" src="img/photo-window-mobile@1x.jpg" alt="Фото пользователя Бориса">
+                </picture>
+              </p>
+              <figcaption class="user-block__comment">
+                <cite class="user-block__name">Борис</cite>
+                <time class="user-block__date" datetime="2018-09-27">(20 часов назад)</time>
+                <p class="user-block__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
+                <span class="user-block__inscription">Нравится: 215</span>
+              </figcaption>
+            </figure>
+            <figure class="photo__item user-block">
+              <p class="user-block__picture">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg">
+                  <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg">
+                  <img class="user-block__image" src="img/photo-fair-mobile@1x.jpg" alt="Фото пользователя Сергея">
+                </picture>
+              </p>
+              <figcaption class="user-block__comment">
+                <cite class="user-block__name">Сергей</cite>
+                <time class="user-block__date" datetime="2018-09-27">(25 часов назад)</time>
+                <p class="user-block__text">Самая кубанская в мире!</p>
+                <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
+                <span class="user-block__inscription">Нравится: 4</span>
+              </figcaption>
+            </figure>
+            <figure class="photo__item user-block">
+              <p class="user-block__picture">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg">
+                  <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg">
+                  <img class="user-block__image" src="img/photo-pov-mobile@1x.jpg" alt="Фото пользователя Максима">
+                </picture>
+              </p>
+              <figcaption class="user-block__comment">
+                <cite class="user-block__name">Максим</cite>
+                <time class="user-block__date" datetime="2018-09-27">(40 часов назад)</time>
+                <p class="user-block__text">Где снег-то?</p>
+                <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
+                <span class="user-block__inscription">Нравится: 150</span>
+              </figcaption>
+            </figure>
+            <figure class="photo__item user-block">
+              <p class="user-block__picture">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg">
+                  <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg">
+                  <img class="user-block__image" src="img/photo-wing-mobile@1x.jpg" alt="Фото пользователя Надежды">
+                </picture>
+              </p>
+              <figcaption class="user-block__comment">
+                <cite class="user-block__name">Надежда</cite>
+                <time class="user-block__date" datetime="2018-09-26">(45 часов назад)</time>
+                <p class="user-block__text">Всем GM и взаимные лайки!</p>
+                <button class="user-block__like" type="button"><span class="visually-hidden">Мне нравится!</span></button>
+                <span class="user-block__inscription">Нравится: 2560</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <p class="photo__text">Затмите их всех!</p>
+        <p class="photo__text photo__text--bottom">Выкладывайте все, что накопилось в телефоне!</p>
       </div>
-      <p class="photo__text">Затмите их всех!</p>
-      <p class="photo__text">Выкладывайте все, что накопилось в телефоне!</p>
     </section>
     <section class="upload-photo">
       <h2 class="visually-hidden">Загрузка и редактирование фотографий</h2>
@@ -172,25 +208,27 @@
     </section>
   </main>
   <footer class="inner-footer">
-    <a class="inner-footer__logo-link" href="index.html">
+    <div class="inner-footer__wrapper">
+      <a class="inner-footer__logo-link" href="index.html">
         <img class="inner-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Приложение «Пинк»">
       </a>
-    <div class="inner-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank"><span class="visually-hidden">Мы в Твиттере</span></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank"><span class="visually-hidden">Мы в Фейсбуке</span></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank"><span class="visually-hidden">Мы в Ютубе</span></a>
-        </li>
-      </ul>
-    </div>
-    <div class="inner-footer__copyright copyright">
-      <b class="copyright__text">Разработано:</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">HTML Academy</span></a>
+      <div class="inner-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank"><span class="visually-hidden">Мы в Твиттере</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank"><span class="visually-hidden">Мы в Ютубе</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="inner-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">HTML Academy</span></a>
+      </div>
     </div>
   </footer>
 </body>
