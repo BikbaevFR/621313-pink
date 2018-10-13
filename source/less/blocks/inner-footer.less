@@ -1,16 +1,17 @@
-.inner-footer {
-  // width: 320px;
+.inner-footer__wrapper {
+  .wrapper();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inner-footer__logo-link {
+  margin-bottom: 40px;
 }
 
 @media (min-width: @tablet-width) {
-  .inner-footer {
-    display: flex;
+  .inner-footer__wrapper {
+    flex-direction: row;
     justify-content: space-between;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .inner-footer {
-    // width: 940px;
   }
 }
