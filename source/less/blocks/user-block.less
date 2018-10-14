@@ -24,12 +24,13 @@
 }
 
 .user-block__comment {
+  display: flex;
+  flex-direction: column;
   width: 280px;
   margin: 0;
-  margin-right: auto;
-  margin-left: auto;
   padding-top: 20px;
   padding-left: 15px;
+  box-sizing: border-box;
 
   text-align: left;
 
@@ -40,14 +41,25 @@
   margin: 0;
 }
 
+.user-block__image {
+  display: block;
+}
+
+.user-block__comment-head {
+  margin: 0;
+}
+
+.user-block__comment-footer {
+  margin: 0;
+}
+
 .user-block--panorama .user-block__image {
   display: block;
-  width: 100%;
+  width: 100vw;
   height: auto;
   position: relative;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: calc(-50vw + 50%);
 }
 
 .user-block__name {
@@ -61,17 +73,18 @@
   text-transform: uppercase;
 }
 
-.user-block__text {
+.user-block__comment-text {
   margin: 0;
 }
 
-.user-block__like {
+.user-block__button {
   position: relative;
 
+  background-color: transparent;
   border: none;
 }
 
-.user-block__like::before {
+.user-block__button::before {
   content: url("../img/icon-heart.svg");
 
   position: absolute;
@@ -94,23 +107,34 @@
   }
 
   .user-block--panorama .user-block__comment {
-    position: relative;
-
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 620px;
-    padding-left: 20px;
+    padding: 0 25px;
+    padding-top: 20px;
   }
 
-  .user-block--panorama .user-block__bottom {
-    position: absolute;
-    top: 0;
-    right: 0;
+  .user-block__comment-text--panorama {
+    flex-shrink: 0;
+    order: 1;
+    width: 520px;
+    margin-top: 20px;
+  }
 
-    margin: 0;
+  .user-block__comment {
+    width: 300px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .user-block--panorama .user-block__comment {
     width: 940px;
+    padding: 0 30px;
+    padding-top: 20px;
+  }
+
+  .user-block__comment-text--panorama {
+    width: 885px;
   }
 }
