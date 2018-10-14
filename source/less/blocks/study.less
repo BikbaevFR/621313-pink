@@ -1,0 +1,80 @@
+.study {
+  background-color: @white;
+}
+
+.study__wrapper {
+  position: relative;
+
+  display: none;
+  .wrapper();
+  min-height: 350px;
+  padding-top: 50px;
+
+  text-align: left;
+}
+
+.study__wrapper::before {
+  content: "";
+
+  position: absolute; // top: 0;
+  // left: 0;
+  width: 238px;
+  height: 276px;
+
+  background-image: url("../img/icon-timer.svg");
+  background-size: 238px 276px;
+  background-repeat: no-repeat;
+}
+
+.study__box {
+  width: 310px;
+  margin-left: 310px;
+}
+
+.study__title {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: @black;
+}
+
+.study__text {
+  margin: 0;
+}
+
+.study__link {
+  font-family: @default-font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: @pink;
+}
+
+@media (min-width: @tablet-width) {
+  .study__wrapper {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .study__wrapper {
+    margin-bottom: 150px;
+  }
+
+  .study__wrapper::before {
+    // top: 0;
+    // left: 0;
+    width: 298px;
+    height: 345px;
+
+    background-image: url("../img/icon-timer.svg");
+    background-size: 298px 345px;
+  }
+
+  .study__box {
+    width: 580px;
+    margin-left: 360px;
+  }
+}

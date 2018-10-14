@@ -1,7 +1,60 @@
 .page-header {
-  width: 320px;
-
+  position: relative; // min-height: 465px;
   color: @white;
 
   background-color: @blue-dark;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+}
+
+.page-header--inner {
+  min-height: 235px;
+}
+
+.page-header__wrapper {
+  background-color: rgba(0, 0, 0, 0.3);
+
+  min-height: 65px;
+}
+
+.page-header__title {
+  margin: 0;
+  padding: 0;
+  .wrapper();
+
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    min-height: 730px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: 50% 0%;
+  }
+
+  .page-header__wrapper {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    min-height: 110px;
+  }
+
+  .page-header--inner {
+    min-height: 440px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    min-height: 850px;
+
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+  }
+
+  .page-header--inner {
+    min-height: 395px;
+  }
 }

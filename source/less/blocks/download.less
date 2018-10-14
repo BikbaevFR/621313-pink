@@ -1,18 +1,45 @@
 .download {
-  width: 320px;
-  min-height: 735px;
-
   font-weight: 300;
   color: @white;
 
   background-color: #1d2631;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+}
+
+.download__wrapper {
+  position: relative;
+
+  .wrapper();
+  min-height: 270px;
+  padding-top: 25px;
+}
+
+.download__wrapper::after {
+  content: url("../img/iphone-hand-mobile@1x.png");
+
+  position: absolute;
+  bottom: 289px;
+  left: 0;
+}
+
+.download__slogan {
+  display: none;
+  margin: 0;
+
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.download__button {
+  margin-bottom: 40px;
 }
 
 .download__list {
   .reset-list();
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .download__link::before {
@@ -43,4 +70,53 @@
   height: 41px;
 
   background-image: url("../img/logo-microsoft.svg");
+}
+
+.download__text {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .download {
+    background-color: transparent;
+  }
+
+  .download__wrapper::after {
+    content: url("../img/iphone-hand-tablet@1x.png");
+
+    bottom: -134px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .download__box {
+    position: relative;
+
+    width: 300px;
+
+    z-index: 3;
+  }
+
+  .download__slogan {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download__wrapper {
+    padding: 0 10px;
+  }
+
+  .download__wrapper::after {
+    content: url("../img/iphone-hand-desktop@1x.png");
+
+    bottom: -279px;
+  }
+
+  .download__box {
+    width: 370px;
+  }
 }
