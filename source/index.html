@@ -13,7 +13,13 @@
     <div class="page-header__wrapper">
       <nav class="page-header__main-nav main-nav main-nav--closed">
         <header class="main-nav__top">
-          <a class="main-nav__logo-link"><img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Приложение «Пинк»"></a>
+          <a class="main-nav__logo-link">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+              <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" alt="Логотип приложения «Пинк»">
+            </picture>
+          </a>
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/Закрыть меню</span></button>
         </header>
         <ul class="main-nav__list site-list">
@@ -122,7 +128,7 @@
         <h2 class="visually-hidden">Наши цены</h2>
         <table class="price__plans">
           <tr>
-            <th class="price__cell"></th>
+            <th class="price__cell price__cell--head"></th>
             <th class="price__plan-head">
               <b class="price__plan-name">База</b>
               <span class="price__plan-price">1,99 USD</span>
