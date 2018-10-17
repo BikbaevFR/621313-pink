@@ -11,7 +11,7 @@
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
-      <nav class="page-header__main-nav main-nav main-nav--closed">
+      <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
         <header class="main-nav__top">
           <a class="main-nav__logo-link">
             <picture>
@@ -213,6 +213,22 @@
       </div>
     </div>
   </footer>
+  <script>
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+  </script>
 </body>
 
 </html>
