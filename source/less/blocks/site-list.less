@@ -1,8 +1,5 @@
 .site-list {
-  .reset-list();
-
-  // display: block;
-
+  .reset-list(); // display: block;
   background-color: @blue-dark;
 }
 
@@ -20,6 +17,14 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @white;
+
+  &:hover {
+    color: @pink;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 @media (min-width: @desktop-width) {
