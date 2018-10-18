@@ -12,7 +12,7 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
-        <header class="main-nav__top">
+        <div class="main-nav__top">
           <a class="main-nav__logo-link">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
@@ -21,7 +21,7 @@
             </picture>
           </a>
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/Закрыть меню</span></button>
-        </header>
+        </div>
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
             <a class="site-list__link">Главная</a>
@@ -44,7 +44,7 @@
         <div class="download__box">
           <p class="download__slogan">Взгляните на жизнь иначе!</p>
           <a class="download__button button button--white" href="https://www.apple.com/ru/itunes/download" target="_blank">Скачать приложение</a>
-          <footer class="download__footer">
+          <div class="download__footer">
             <ul class="download__list">
               <li class="download__item">
                 <a class="download__link download__link--apple" href="https://www.apple.com/ru/itunes/download" target="_blank"><span class="visually-hidden">Apple</span></a>
@@ -57,7 +57,7 @@
               </li>
             </ul>
             <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-          </footer>
+          </div>
         </div>
       </div>
     </section>
@@ -91,7 +91,8 @@
       <div class="study__wrapper">
         <div class="study__box">
           <h2 class="study__title">Эффект <span class="study__title-br">на 24 часа!</span></h2>
-          <p class="study__text">Британские ученые провели исследования и доказали, <span class="study__text-br-desktop">что положительный эффект <span class="study__text-br">от использования приложения длится</span> <span class="study__text-br">целые сутки!</span></span></p>
+          <p class="study__text">Британские ученые провели исследования и доказали, <span class="study__text-br-desktop">что положительный эффект <span class="study__text-br">от использования приложения длится</span> <span class="study__text-br">целые сутки!</span></span>
+          </p>
           <a href="#" class="study__link">Узнать больше об исследовании</a>
         </div>
       </div>
@@ -133,7 +134,7 @@
               <b class="price__plan-name">База</b>
               <span class="price__plan-price">1,99 USD</span>
             </th>
-            <th class="price__plan-head">
+            <th class="price__plan-head price__plan-head--hit">
               <b class="price__plan-name">Стандарт</b>
               <span class="price__plan-price">3,99 USD</span>
             </th>
@@ -144,21 +145,21 @@
           </tr>
           <tr>
             <td class="price__cell">Розовый фильтр</td>
-            <td class="price__feature-name price__feature-name--border">Розовый фильтр</td>
-            <td class="price__feature-name price__feature-name--border">Розовый фильтр</td>
-            <td class="price__feature-name price__feature-name--border">Розовый фильтр</td>
+            <td class="price__feature-name price__feature-name--border">Розовый фильтр <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span></td>
+            <td class="price__feature-name price__feature-name--border">Розовый фильтр <span class="price__mark price__mark--yes"><span class="visually-hidden">Да</span></span></td>
+            <td class="price__feature-name price__feature-name--border">Розовый фильтр <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span></td>
           </tr>
           <tr>
             <td class="price__cell">Смайлики</td>
-            <td class="price__feature-name">Смайлики</td>
-            <td class="price__feature-name">Смайлики</td>
-            <td class="price__feature-name">Смайлики</td>
+            <td class="price__feature-name">Смайлики <span class="price__mark price__mark--no price__mark--no-hidden"><span class="visually-hidden">Нет</span></span></td>
+            <td class="price__feature-name">Смайлики <span class="price__mark price__mark--yes"><span class="visually-hidden">Да</span></span></td>
+            <td class="price__feature-name">Смайлики <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span></td>
           </tr>
           <tr>
             <td class="price__cell">Комментарии</td>
-            <td class="price__feature-name">Комментарии</td>
-            <td class="price__feature-name">Комментарии</td>
-            <td class="price__feature-name">Комментарии</td>
+            <td class="price__feature-name">Комментарии <span class="price__mark price__mark--no price__mark--no-hidden"><span class="visually-hidden">Нет</span></span></td>
+            <td class="price__feature-name">Комментарии <span class="price__mark price__mark--no"><span class="visually-hidden">Нет</span></span></td>
+            <td class="price__feature-name">Комментарии <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span></td>
           </tr>
         </table>
         <p class="price__toggles slider__toggles">
@@ -228,6 +229,7 @@
       navMain.classList.remove('main-nav--opened');
     }
   });
+
   </script>
 </body>
 
