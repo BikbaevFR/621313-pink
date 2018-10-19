@@ -7,7 +7,7 @@
 }
 
 .reviews__wrapper {
-  // position: relative;
+  position: relative;
   .wrapper();
   padding-top: 43px;
   padding-bottom: 80px;
@@ -80,6 +80,22 @@
   .reviews__wrapper {
     padding-top: 70px;
     padding-bottom: 131px;
+  }
+
+  .reviews__wrapper::before {
+    content: "";
+
+    position: absolute;
+    top: -45px;
+    left: 443px;
+
+    width: 79px;
+    height: 63px;
+
+    background-image: url("../img/icon-quotes.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 79px auto;
   }
 
   .reviews__author-name {

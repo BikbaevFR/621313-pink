@@ -35,3 +35,42 @@
   background-color: @white;
   border-color: @blue-dark;
 }
+
+.slider__review-toggle {
+  position: absolute;
+  top: 102px;
+
+  display: none;
+  width: 30px;
+  height: 30px;
+
+  background-color: transparent;
+  outline: none;
+  border: 2px solid @blue-dark;
+  opacity: 0.3;
+
+  transform: rotate(45deg);
+
+  cursor: pointer;
+  z-index: 3;
+}
+
+.slider__review-toggle--prev {
+  left: 15px;
+
+  border-top: none;
+  border-right: none;
+}
+
+.slider__review-toggle--next {
+  right: 15px;
+
+  border-bottom: none;
+  border-left: none;
+}
+
+@media (min-width: @desktop-width) {
+  .slider__review-toggle {
+    display: block;
+  }
+}
