@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  margin-bottom: 40px;
+  width: 132px;
+  margin: 0 auto;
+  // margin-bottom: 40px;
 }
 
 .copyright__text {
@@ -23,7 +24,7 @@
 
   position: absolute;
   top: 3px;
-  left: 0;
+  left: -2px;
 
   width: 27px;
   height: 34px;
@@ -38,6 +39,10 @@
 
   .copyright__text {
     font-size: 14px;
+  }
+
+  .copyright__link::before {
+    left: 0;
   }
 }
 

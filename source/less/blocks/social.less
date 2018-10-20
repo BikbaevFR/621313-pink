@@ -1,5 +1,5 @@
 .social {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .social__list {
@@ -39,7 +39,7 @@
 .social__link::before {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 55%;
   transform: translate(-50%, -50%);
 
   background-repeat: no-repeat;
@@ -58,7 +58,6 @@
   content: url("../img/icon-youtube.svg");
 
   left: 54%;
-  top: 46%;
 }
 
 @media (min-width: @tablet-width) {
@@ -66,6 +65,10 @@
     margin-right: 18px;
     margin-bottom: 0;
     padding-top: 2px;
+  }
+
+  .social__link--youtube::before {
+    top: 46%;
   }
 }
 

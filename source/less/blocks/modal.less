@@ -1,15 +1,45 @@
 .modal {
-  width: 280px;
-  margin: 0 auto;
+  position: fixed;
+  z-index: 100;
+
+  display: none;
+  width: 100%;
 
   background-color: @white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   /* Временно */
   outline: 2px solid red;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.modal__wrapper {
+  .wrapper();
+  padding-top: 39px;
+  padding-bottom: 31px;
+}
+
+.modal--failure .modal__wrapper {
+  padding-bottom: 49px;
+}
+
+.modal__button-container {
+  background-color: @white--dark;
+}
+
+.modal__button-wrapper {
+  margin: 0;
+  .wrapper();
+  padding-top: 48px;
+  padding-bottom: 50px;
 }
 
 .modal__intro {
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 
   font-size: 18px;
   font-weight: 700;
@@ -18,7 +48,14 @@
 
 .modal__text {
   margin: 0;
-  margin-bottom: 40px;
+}
+
+.modal--failure .modal__text {
+  padding-bottom: 39px;
+}
+
+.modal__text-br {
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
