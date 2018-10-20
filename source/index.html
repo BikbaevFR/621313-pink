@@ -15,7 +15,7 @@
         <div class="main-nav__top">
           <a class="main-nav__logo-link">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
               <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
               <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" alt="Логотип приложения «Пинк»">
             </picture>
@@ -117,7 +117,8 @@
             <p class="reviews__text"></p>
           </blockquote>
         </div>
-        <button class="slider__review-toggle slider__review-toggle--prev"></button><button class="slider__review-toggle slider__review-toggle--next"></button>
+        <button class="slider__review-toggle slider__review-toggle--prev"></button>
+        <button class="slider__review-toggle slider__review-toggle--next"></button>
         <p class="reviews__toggles slider__toggles">
           <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">1</span></button>
           <button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
@@ -146,21 +147,30 @@
           </tr>
           <tr>
             <td class="price__cell">Розовый фильтр</td>
-            <td class="price__feature-name price__feature-name--border">Розовый фильтр <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span></td>
-            <td class="price__feature-name price__feature-name--border">Розовый фильтр <span class="price__mark price__mark--yes"><span class="visually-hidden">Да</span></span></td>
-            <td class="price__feature-name price__feature-name--border">Розовый фильтр <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span></td>
+            <td class="price__feature-name price__feature-name--border">Розовый фильтр <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span>
+            </td>
+            <td class="price__feature-name price__feature-name--border">Розовый фильтр <span class="price__mark price__mark--yes"><span class="visually-hidden">Да</span></span>
+            </td>
+            <td class="price__feature-name price__feature-name--border">Розовый фильтр <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span>
+            </td>
           </tr>
           <tr>
             <td class="price__cell">Смайлики</td>
-            <td class="price__feature-name">Смайлики <span class="price__mark price__mark--no price__mark--no-hidden"><span class="visually-hidden">Нет</span></span></td>
-            <td class="price__feature-name">Смайлики <span class="price__mark price__mark--yes"><span class="visually-hidden">Да</span></span></td>
-            <td class="price__feature-name">Смайлики <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span></td>
+            <td class="price__feature-name">Смайлики <span class="price__mark price__mark--no price__mark--no-hidden"><span class="visually-hidden">Нет</span></span>
+            </td>
+            <td class="price__feature-name">Смайлики <span class="price__mark price__mark--yes"><span class="visually-hidden">Да</span></span>
+            </td>
+            <td class="price__feature-name">Смайлики <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span>
+            </td>
           </tr>
           <tr>
             <td class="price__cell">Комментарии</td>
-            <td class="price__feature-name">Комментарии <span class="price__mark price__mark--no price__mark--no-hidden"><span class="visually-hidden">Нет</span></span></td>
-            <td class="price__feature-name">Комментарии <span class="price__mark price__mark--no"><span class="visually-hidden">Нет</span></span></td>
-            <td class="price__feature-name">Комментарии <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span></td>
+            <td class="price__feature-name">Комментарии <span class="price__mark price__mark--no price__mark--no-hidden"><span class="visually-hidden">Нет</span></span>
+            </td>
+            <td class="price__feature-name">Комментарии <span class="price__mark price__mark--no"><span class="visually-hidden">Нет</span></span>
+            </td>
+            <td class="price__feature-name">Комментарии <span class="price__mark price__mark--yes price__mark--yes-hidden"><span class="visually-hidden">Да</span></span>
+            </td>
           </tr>
         </table>
         <p class="price__toggles slider__toggles">
@@ -174,22 +184,32 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__contacts contacts">
-        <p class="contacts__intro">Остались вопросы?</p>
-        <p class="contacts__intro contacts__intro--bottom">Свяжитесь с нами!</p>
-        <ul class="contacts__list">
-          <li class="contacts__item contacts__item--phone">
-            <b class="contacts__title">Звоните:</b>
-            <a class="contacts__text contacts__text--phone" href="tel:+78125556666">+7 (812) 555-66-66</a>
-          </li>
-          <li class="contacts__item contacts__item--email">
-            <b class="contacts__title">Пишите:</b>
-            <a class="contacts__text contacts__text--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </li>
-          <li class="contacts__item contacts__item--address">
-            <b class="contacts__title">Приезжайте в гости:</b>
-            <address class="contacts__text contacts__text--address">ул. Большая Конюшенная, 19/8</address>
-          </li>
-        </ul>
+        <div class="contacts__wrapper">
+          <p class="contacts__intro">Остались вопросы?</p>
+          <p class="contacts__intro contacts__intro--bottom">Свяжитесь с нами!</p>
+          <ul class="contacts__list">
+            <li class="contacts__item contacts__item--phone">
+              <b class="contacts__title">Звоните:</b>
+              <a class="contacts__text contacts__text--phone" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            </li>
+            <li class="contacts__item contacts__item--email">
+              <b class="contacts__title">Пишите:</b>
+              <a class="contacts__text contacts__text--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+            <li class="contacts__item contacts__item--address">
+              <b class="contacts__title">Приезжайте в гости:</b>
+              <address class="contacts__text contacts__text--address">ул. Большая Конюшенная, 19/8</address>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/-/CBBkRBXpKB" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg">
+            <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg">
+            <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+          </picture>
+        </div>
       </div>
       <div class="page-footer__inner-footer inner-footer">
         <a class="inner-footer__logo-link" href="index.html">
