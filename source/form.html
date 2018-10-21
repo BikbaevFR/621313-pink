@@ -101,11 +101,11 @@
           <fieldset class="form__block form__block--contacts">
             <legend class="form__block-title form__block-title--hidden">Контактная информация</legend>
             <ul class="form__list form__list--contacts form__list__wrapper">
-              <li class="form__item form__item--wrapper">
+              <li class="form__item form__item--phone form__item--wrapper">
                 <label class="form__title-item" for="phone">Номер телефона</label>
                 <input class="form__text" id="phone" type="tel" name="form-phone" placeholder="Номер, пожалуйста">
               </li>
-              <li class="form__item form__item--wrapper">
+              <li class="form__item form__item--email form__item--wrapper">
                 <label class="form__title-item" for="email">Адрес почты</label>
                 <input class="form__text" id="email" type="email" name="form-email" placeholder="Введите почту *" required>
               </li>
@@ -115,7 +115,7 @@
         <div class="form__container form__container--os">
           <fieldset class="form__block form__block--os">
             <legend class="form__block-title">С каким приложением путешествовали?</legend>
-            <ul class="form__list">
+            <ul class="form__list form__list__wrapper">
               <li class="form__item form__item--field form__item--wrapper">
                 <input class="visually-hidden form__input form__input--radio" id="os-ios" type="radio" name="os" value="ios" checked>
                 <label class="form__field form__field--radio" for="os-ios">Pink для iOS</label>
