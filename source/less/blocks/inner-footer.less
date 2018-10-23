@@ -1,9 +1,12 @@
+.inner-footer {
+  padding-bottom: 40px;
+}
+
 .inner-footer__wrapper {
   .wrapper();
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 43px;
 }
 
 .inner-footer__logo-link {
@@ -14,7 +17,6 @@
   .inner-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 38px;
   }
 
   .inner-footer__logo-link {
@@ -23,6 +25,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .inner-footer {
+    padding-bottom: 70px;
+  }
+
   .inner-footer__wrapper {
     padding-right: 10px;
     padding-left: 10px;

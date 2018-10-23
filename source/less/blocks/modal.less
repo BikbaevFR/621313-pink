@@ -7,8 +7,6 @@
 
   background-color: @white;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  /* Временно */
-  outline: 2px solid red;
 
   left: 50%;
   top: 50%;
@@ -17,24 +15,11 @@
 }
 
 .modal__wrapper {
-  .wrapper();
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
   padding-top: 39px;
-  padding-bottom: 31px;
-}
-
-.modal--failure .modal__wrapper {
-  padding-bottom: 49px;
-}
-
-.modal__button-container {
-  background-color: @white--dark;
-}
-
-.modal__button-wrapper {
-  margin: 0;
-  .wrapper();
-  padding-top: 48px;
-  padding-bottom: 50px;
+  padding-bottom: 29px;
 }
 
 .modal__intro {
@@ -50,12 +35,25 @@
   margin: 0;
 }
 
-.modal--failure .modal__text {
-  padding-bottom: 39px;
-}
-
 .modal__text-br {
   display: block;
+}
+
+.modal--dispatch .modal__button-container {
+  background-color: @white--dark;
+}
+
+.modal__button-wrapper {
+  width: 280px;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 50px 20px;
+}
+
+.modal--failure .modal__button-wrapper {
+  padding-top: 10px;
+  padding-bottom: 48px;
 }
 
 @media (min-width: @tablet-width) {
@@ -65,15 +63,40 @@
 
   .modal__wrapper {
     width: 320px;
+    padding: 35px 20px;
+  }
+
+  .modal__intro {
+    width: 230px;
     margin: 0 auto;
-    padding-top: 50px;
+    margin-bottom: 23px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .modal__text-br {
+    display: inline;
   }
 
   .modal__button-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 460px;
+    width: 320px;
+    padding: 0;
+    padding-top: 46px;
+    padding-bottom: 51px;
+  }
+
+  .modal--failure .modal__button-wrapper {
+    padding-top: 2px;
+    padding-bottom: 50px;
   }
 }
 
@@ -82,10 +105,39 @@
     width: 780px;
   }
 
-  .modal__button-wrapper {
-    width: 780px;
-    min-height: 165px;
+  .modal__wrapper {
+    width: 500px;
+    padding: 39px 0;
+  }
 
+  .modal--failure .modal__wrapper {
+    padding-top: 41px;
+    padding-bottom: 63px;
+  }
+
+  .modal__intro {
+    width: 400px;
+  }
+
+  .modal__text {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .modal__button-container {
     background-color: @white--dark;
+  }
+
+  .modal__button-wrapper {
+    width: 460px;
+    padding-top: 47px;
+  }
+
+  .modal--dispatch .modal__button {
+    width: 460px;
+  }
+
+  .modal--failure .modal__button-wrapper {
+    padding-top: 46px;
   }
 }

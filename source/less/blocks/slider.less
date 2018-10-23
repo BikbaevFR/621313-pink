@@ -44,15 +44,23 @@
   width: 30px;
   height: 30px;
 
-  background-color: transparent;
+  background-color: @white;
   outline: none;
-  border: 2px solid @blue-dark;
+  border: 2px solid rgba(40, 54, 69, 0.3);
   opacity: 0.3;
 
   transform: rotate(45deg);
 
   cursor: pointer;
   z-index: 3;
+
+  &:hover {
+    border-color: rgba(40, 54, 69, 0.6);
+  }
+
+  &:active {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
 }
 
 .slider__review-toggle--prev {
