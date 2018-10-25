@@ -1,16 +1,23 @@
+.user-block {
+  margin-bottom: 18px;
+}
+
 .user-block--panorama {
   position: relative;
+
+  margin-bottom: 21px;
 }
 
 .user-block--panorama::before {
   content: "Панорама дня";
 
   position: absolute;
-  right: 20px;
+  right: 0;
 
   display: block;
   width: 140px;
-  height: 36px;
+  height: 31px;
+  padding-top: 5px;
 
   font-family: @default-font;
   font-size: 12px;
@@ -21,20 +28,32 @@
   color: @white;
 
   background-color: @pink;
+
+  z-index: 3;
 }
 
 .user-block__comment {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 280px;
   margin: 0;
-  padding-top: 20px;
-  padding-left: 15px;
+  padding: 17px;
+  padding-top: 16px;
+  padding-left: 17px;
+  padding-bottom: 21px;
   box-sizing: border-box;
 
   text-align: left;
 
   background-color: @white--dark;
+
+  outline: 1px solid red;
+}
+
+.user-block--panorama .user-block__comment {
+  padding: 17px;
+  box-sizing: border-box;
 }
 
 .user-block__picture {
@@ -51,6 +70,7 @@
 
 .user-block__comment-footer {
   margin: 0;
+  margin-bottom: 3px;
 }
 
 .user-block--panorama .user-block__image {
@@ -75,6 +95,7 @@
 
 .user-block__comment-text {
   margin: 0;
+  margin-bottom: 9px;
 }
 
 .user-block__button {
@@ -88,17 +109,18 @@
   content: url("../img/icon-heart.svg");
 
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
+  left: 1px;
+  top: -10px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 .user-block__inscription {
+  margin-left: 16px;
+
   font-size: 12px;
   text-transform: uppercase;
+  color: @pink;
 }
 
 @media (min-width: @tablet-width) {
