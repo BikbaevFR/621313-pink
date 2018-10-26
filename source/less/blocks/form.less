@@ -85,7 +85,6 @@
   position: relative;
 
   margin-bottom: 52px;
-  padding-left: 69px;
 }
 
 .form__title-item {
@@ -102,6 +101,12 @@
   margin-top: 6px;
   padding-left: 20px;
   box-sizing: border-box;
+
+  font-family: @default-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: @blue-dark;
 
   border: 2px solid #e5e5e5;
 
@@ -133,6 +138,11 @@
 }
 
 .form__field {
+  padding: 10px 0;
+  padding-left: 69px;
+
+
+  font-family: @default-font;
   font-size: 18px;
   line-height: 30px;
 }
@@ -281,7 +291,7 @@
 
   .form__container--contacts {
     order: 3;
-    padding-top: 32px;
+    padding-top: 22px;
     padding-bottom: 20px;
   }
 
@@ -295,7 +305,7 @@
 
   .form__container--emotions {
     order: 5;
-    padding-top: 36px;
+    padding-top: 30px;
     padding-bottom: 20px;
   }
 
@@ -322,7 +332,19 @@
 
   .form__container--os .form__block-title {
     width: 367px;
-    margin-bottom: 49px;
+    margin-bottom: 40px;
+  }
+
+  .form__block--os .form__item {
+    margin-bottom: 25px;
+  }
+
+  .form__input--radio + .form__field::before {
+    top: 4px;
+  }
+
+  .form__input--radio:checked + .form__field::after {
+    top: 16px;
   }
 
   .form__container--contacts .form__block-title {
@@ -332,7 +354,7 @@
 
   .form__container--progress .form__block-title {
     width: 436px;
-    margin-bottom: 48px;
+    margin-bottom: 38px;
   }
 
   .form__container--emotions .form__block-title {
@@ -356,7 +378,7 @@
     margin-bottom: 46px;
   }
 
-  .form__item--field {
+  .form__field {
     padding-left: 59px;
   }
 
@@ -392,15 +414,24 @@
   }
 
   .form__block--contacts .form__item--email::before {
-    background-image: url("../../img/icon-mail.svg");
+    background-image: url("../img/icon-mail.svg");
   }
 
   .form__block--progress .form__item {
-    margin-bottom: 53px;
+    margin-bottom: 32px;
   }
 
   .form__block--progress .form__item--last {
     margin-bottom: 51px;
+  }
+
+  .form__input--checkbox + .form__field::before {
+    top: 5px;
+  }
+
+
+  .form__input--checkbox:checked + .form__field::after {
+    top: 10px;
   }
 
   .form__title-item {
@@ -484,7 +515,7 @@
 
   .form__container--os .form__block-title {
     width: 368px;
-    margin-bottom: 50px;
+    margin-bottom: 41px;
   }
 
   .form__block--os .form__item {
@@ -497,7 +528,7 @@
 
   .form__container--contacts {
     margin: 25px 0;
-    padding-top: 30px;
+    padding-top: 19px;
   }
 
   .form__container--contacts .form__block-title {
@@ -530,7 +561,7 @@
   }
 
   .form__container--progress .form__block-title {
-    margin-bottom: 49px;
+    margin-bottom: 40px;
   }
 
   .form__list--progress {
@@ -543,13 +574,13 @@
 
   .form__list--progress .form__item {
     margin: 0;
-    margin-bottom: 53px;
+    margin-bottom: 33px;
     flex-shrink: 0;
   }
 
   .form__container--emotions {
-    margin-bottom: 25px;
-    padding-top: 32px;
+    margin-bottom: 26px;
+    padding-top: 41px;
   }
 
   .form__container--emotions .form__block-title {
@@ -563,7 +594,6 @@
 
   .form__footer {
     padding: 0;
-    padding-top: 40px;
   }
 
   .form__legend--hidden {
