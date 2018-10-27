@@ -1,32 +1,55 @@
 .upload-photo {
+  position: relative;
+
   background-color: @white--dark;
+}
+
+.upload-photo::after {
+  content: "";
+
+  position: absolute;
+  bottom: 199px;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #dddfe0;
 }
 
 .upload-photo__wrapper {
   .wrapper();
   padding-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .upload-photo__image {
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 33px;
 }
 
 .upload-photo__list {
   .reset-list();
 
   display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 3px;
 }
 
-.upload-photo__item {
-  margin-right: 50px;
+.upload-photo__item--crop {
+  margin-left: 28px;
+  margin-right: 20px;
+}
+
+.upload-photo__item--fill {
+  margin-right: 27px;
 }
 
 .upload-photo__instrument {
   position: relative;
   /* Временно */
+
   margin-bottom: 30px;
 
   background-color: transparent;
@@ -73,7 +96,7 @@
 .upload-photo__range-toggle {
   position: absolute;
   top: -6px;
-  left: 85%;
+  left: 80%;
 
   width: 10px;
   height: 10px;
@@ -87,7 +110,7 @@
 
 .upload-photo__range-bottom {
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 72px;
 }
 
 .upload-photo__post {
