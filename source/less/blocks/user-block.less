@@ -1,7 +1,3 @@
-.user-block {
-  margin-bottom: 18px;
-}
-
 .user-block--panorama {
   position: relative;
 
@@ -47,8 +43,6 @@
   text-align: left;
 
   background-color: @white--dark;
-
-  outline: 1px solid red;
 }
 
 .user-block--panorama .user-block__comment {
@@ -76,7 +70,6 @@
 .user-block--panorama .user-block__image {
   display: block;
   width: 100vw;
-  height: auto;
   position: relative;
   top: 0;
   left: calc(-50vw + 50%);
@@ -124,8 +117,26 @@
 }
 
 @media (min-width: @tablet-width) {
+  .user-block__image--first {
+    height: 509px;
+  }
+
   .user-block--panorama {
     margin-right: 0;
+  }
+
+  .user-block--panorama::before {
+    top: 56px;
+  }
+
+  .user-block__comment {
+    width: 300px;
+    padding: 0 27px;
+    padding-top: 23px;
+  }
+
+  .user-block--body .user-block__comment {
+    min-height: 150px;
   }
 
   .user-block--panorama .user-block__comment {
@@ -133,30 +144,87 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 620px;
-    padding: 0 25px;
-    padding-top: 20px;
+    padding: 0 27px;
+    padding-top: 23px;
+    margin-bottom: 51px;
+  }
+
+  .user-block--body .user-block__comment-text {
+    min-height: 47px;
+    margin-bottom: 13px;
   }
 
   .user-block__comment-text--panorama {
     flex-shrink: 0;
     order: 1;
     width: 520px;
-    margin-top: 20px;
+    margin-bottom: 24px;
   }
 
-  .user-block__comment {
-    width: 300px;
+  .user-block__comment-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .user-block__comment-footer--panorama {
+    width: 121px;
+  }
+
+  .user-block__button {
+    order: 2;
+    padding: 0;
+  }
+
+  .user-block__button::before {
+    top: 3px;
+    left: -18px;
+  }
+
+  .user-block__comment-footer--panorama .user-block__button::before {
+    top: 5px;
+    left: -15px;
+  }
+
+  .user-block__inscription {
+    margin: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .user-block .user-block__image--first {
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 1200px;
+    height: 507px;
+    margin: 0 auto;
+  }
+
+  .user-block--panorama::before {
+    top: 54px;
+  }
+
   .user-block--panorama .user-block__comment {
     width: 940px;
-    padding: 0 30px;
-    padding-top: 20px;
+    margin-bottom: 50px;
+    padding: 0 27px;
+    padding-top: 22px;
+  }
+
+  .user-block__comment-footer--panorama {
+    width: 125px;
+  }
+
+  .user-block__comment-footer--panorama .user-block__button::before {
+    left: -17px;
   }
 
   .user-block__comment-text--panorama {
     width: 885px;
+  }
+
+  .user-block--body .user-block__comment {
+    min-height: 155px;
   }
 }

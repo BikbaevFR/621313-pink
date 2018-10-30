@@ -1,7 +1,7 @@
 .button {
   display: block;
   width: 280px;
-  min-height: 55px; // margin: 0;
+  min-height: 55px;
   font-family: @default-font;
   font-size: 18px;
   font-weight: 700;
@@ -41,12 +41,34 @@
   color: @pink;
 
   border-color: @pink;
+
+  &:hover {
+    color: @white;
+
+    background-color: @pink;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--gray {
   color: @blue-dark--opacity;
 
   border-color: @blue-dark--opacity;
+
+  &:hover {
+    color: rgba(40, 54, 69, 0.3);
+
+    border-color: rgba(40, 54, 69, 0.3);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: rgba(40, 54, 69, 0.3);
+  }
 }
 
 .button--form {
@@ -93,7 +115,7 @@
   }
 
   .button--photo {
-    width: 185px;
-    min-height: 50px;
+    width: 183px;
+    min-height: 55px;
   }
 }
