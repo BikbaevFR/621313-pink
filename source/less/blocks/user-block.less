@@ -1,16 +1,19 @@
 .user-block--panorama {
   position: relative;
+
+  margin-bottom: 21px;
 }
 
 .user-block--panorama::before {
   content: "Панорама дня";
 
   position: absolute;
-  right: 20px;
+  right: 0;
 
   display: block;
   width: 140px;
-  height: 36px;
+  height: 31px;
+  padding-top: 5px;
 
   font-family: @default-font;
   font-size: 12px;
@@ -21,20 +24,30 @@
   color: @white;
 
   background-color: @pink;
+
+  z-index: 3;
 }
 
 .user-block__comment {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 280px;
   margin: 0;
-  padding-top: 20px;
-  padding-left: 15px;
+  padding: 17px;
+  padding-top: 16px;
+  padding-left: 17px;
+  padding-bottom: 21px;
   box-sizing: border-box;
 
   text-align: left;
 
   background-color: @white--dark;
+}
+
+.user-block--panorama .user-block__comment {
+  padding: 17px;
+  box-sizing: border-box;
 }
 
 .user-block__picture {
@@ -51,12 +64,12 @@
 
 .user-block__comment-footer {
   margin: 0;
+  margin-bottom: 3px;
 }
 
 .user-block--panorama .user-block__image {
   display: block;
   width: 100vw;
-  height: auto;
   position: relative;
   top: 0;
   left: calc(-50vw + 50%);
@@ -75,6 +88,7 @@
 
 .user-block__comment-text {
   margin: 0;
+  margin-bottom: 9px;
 }
 
 .user-block__button {
@@ -88,22 +102,41 @@
   content: url("../img/icon-heart.svg");
 
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
+  left: 1px;
+  top: -10px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 .user-block__inscription {
+  margin-left: 16px;
+
   font-size: 12px;
   text-transform: uppercase;
+  color: @pink;
 }
 
 @media (min-width: @tablet-width) {
+  .user-block__image--first {
+    // height: 509px;
+  }
+
   .user-block--panorama {
     margin-right: 0;
+  }
+
+  .user-block--panorama::before {
+    top: 56px;
+  }
+
+  .user-block__comment {
+    width: 300px;
+    padding: 0 27px;
+    padding-top: 23px;
+  }
+
+  .user-block--body .user-block__comment {
+    min-height: 150px;
   }
 
   .user-block--panorama .user-block__comment {
@@ -111,30 +144,87 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 620px;
-    padding: 0 25px;
-    padding-top: 20px;
+    padding: 0 27px;
+    padding-top: 23px;
+    margin-bottom: 51px;
+  }
+
+  .user-block--body .user-block__comment-text {
+    min-height: 47px;
+    margin-bottom: 13px;
   }
 
   .user-block__comment-text--panorama {
     flex-shrink: 0;
     order: 1;
     width: 520px;
-    margin-top: 20px;
+    margin-bottom: 24px;
   }
 
-  .user-block__comment {
-    width: 300px;
+  .user-block__comment-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .user-block__comment-footer--panorama {
+    width: 121px;
+  }
+
+  .user-block__button {
+    order: 2;
+    padding: 0;
+  }
+
+  .user-block__button::before {
+    top: 3px;
+    left: -18px;
+  }
+
+  .user-block__comment-footer--panorama .user-block__button::before {
+    top: 5px;
+    left: -15px;
+  }
+
+  .user-block__inscription {
+    margin: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .user-block .user-block__image--first {
+    // left: 50%;
+    // transform: translateX(-50%);
+
+    // width: 1200px;
+    // height: 507px;
+    // margin: 0 auto;
+  }
+
+  .user-block--panorama::before {
+    top: 54px;
+  }
+
   .user-block--panorama .user-block__comment {
     width: 940px;
-    padding: 0 30px;
-    padding-top: 20px;
+    margin-bottom: 50px;
+    padding: 0 27px;
+    padding-top: 22px;
+  }
+
+  .user-block__comment-footer--panorama {
+    width: 125px;
+  }
+
+  .user-block__comment-footer--panorama .user-block__button::before {
+    left: -17px;
   }
 
   .user-block__comment-text--panorama {
     width: 885px;
+  }
+
+  .user-block--body .user-block__comment {
+    min-height: 155px;
   }
 }

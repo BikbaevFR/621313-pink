@@ -1,17 +1,43 @@
 .price {
+  position: relative;
+
   background-color: @white--dark;
 }
 
-.price__wrapper {
-  .wrapper();
-  padding-top: 130px;
+.price::before {
+  content: "";
+
+  position: absolute;
+  left: calc(-50vw + 50%);
+
+  display: block;
+  width: 100vw;
+
+  height: 150px;
+  background-color: @white--dark;
+  transform: rotate(-4deg);
+  top: -32px;
 
   overflow: hidden;
+
+  z-index: 2;
+}
+
+.price__wrapper {
+  position: relative;
+
+  .wrapper();
+  padding-top: 47px;
+  padding-bottom: 45px;
+
+  overflow: hidden;
+
+  z-index: 3;
 }
 
 .price__plans {
   width: 840px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   line-height: 30px;
   text-transform: uppercase;
@@ -26,14 +52,16 @@
 }
 
 .price__plans td {
-  height: 60px;
+  height: 58px;
 
   background-color: @white;
   border: 2px solid #e5e5e5;
 }
 
 .price__feature-name {
-  padding-left: 20px;
+  position: relative;
+
+  padding-left: 21px;
 
   text-align: left;
 }
@@ -43,7 +71,9 @@
 }
 
 .price__plan-head {
-  height: 100px;
+  position: relative;
+
+  height: 96px;
 
   color: @white;
 
@@ -52,8 +82,44 @@
   border-right: 2px solid #e5e5e5;
 }
 
+.price__plan-head--hit {
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+
+    width: 74px;
+    height: 73px;
+  }
+
+  &::before {
+    content: "";
+
+    top: 0;
+
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "Хит";
+
+    top: 5px;
+
+    font-family: @default-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+
+    transform: rotate(-45deg);
+  }
+}
+
 .price__plan-name {
   display: block;
+  margin-top: -5px;
+  margin-bottom: 2px;
 
   font-size: 18px;
   font-weight: 700;
@@ -66,34 +132,199 @@
   font-weight: 300;
 }
 
+.price__mark::before {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+  right: 18px;
+
+  background-repeat: no-repeat;
+}
+
+.price__mark--yes::before {
+  width: 31px;
+  height: 21px;
+
+  background-image: url("../img/icon-yes.svg");
+}
+
+.price__mark--yes-hidden::before {
+  right: 15px;
+}
+
+.price__mark--no::before {
+  top: 15px;
+  right: 20px;
+
+  width: 27px;
+  height: 26px;
+
+  background-image: url("../img/icon-no.svg");
+}
+
+.price__mark--no-hidden::before {
+  right: 18px;
+}
+
 .price__toggles {
   margin: 0;
 }
 
 @media (min-width: @tablet-width) {
+  .price::before {
+    top: -40px;
+
+    height: 200px;
+
+    transform: rotate(-4.2deg);
+  }
+
+  .price__wrapper {
+    padding-top: 20px;
+    padding-bottom: 38px;
+  }
+
   .price__plans {
     width: 620px;
 
     transform: translateX(0);
   }
 
+  .price__plan-head {
+    width: 151px;
+    height: 66px;
+    padding-top: 12px;
+  }
+
+  .price__plan-name {
+    margin-bottom: -2px;
+
+    font-size: 16px;
+  }
+
+  .price__plan-price {
+    font-size: 18px;
+  }
+
+  .price__plan-head--hit {
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+
+      width: 61px;
+      height: 61px;
+    }
+
+    &::before {
+      background-image: url("../../img/bg-hit-tablet.svg");
+    }
+
+    &::after {
+      top: 0;
+    }
+  }
+
+  .price__plans td {
+    height: 44px;
+  }
+
   .price__cell {
     display: table-cell;
+    padding-left: 15px;
 
+    text-align: left;
     text-transform: none;
   }
 
   .price__feature-name {
     font-size: 0;
   }
+
+  .price__mark--yes::before {
+    top: 13px;
+    right: 60px;
+  }
+
+  .price__mark--no::before {
+    top: 9px;
+    right: 63px;
+  }
+
+  .price__toggles {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .price::before {
+    top: -52px;
+
+    height: 250px;
+
+    transform: rotate(-3.9deg);
+  }
+
+  .price__wrapper {
+    padding-top: 55px;
+    padding-bottom: 66px;
+  }
+
   .price__plans {
     width: 940px;
   }
 
-  .price__cell {
+  .price__plan-head {
+    width: 232px;
+    height: 94px;
+    padding-top: 3px;
+  }
+
+  .price__plan-name {
+    margin-bottom: 2px;
+
     font-size: 18px;
+  }
+
+  .price__plan-price {
+    font-size: 24px;
+  }
+
+  .price__plan-head--hit {
+    &::before,
+    &::after {
+      width: 74px;
+      height: 73px;
+    }
+
+    &::before {
+      background-image: url("../img/bg-hit.svg");
+    }
+
+    &::after {
+      top: 5px;
+      left: 3px;
+    }
+  }
+
+  .price__plans td {
+    height: 58px;
+  }
+
+  .price__cell {
+    padding-left: 20px;
+
+    font-size: 18px;
+  }
+
+  .price__mark--yes::before {
+    top: 22px;
+    right: 101px;
+  }
+
+  .price__mark--no::before {
+    top: 17px;
+    right: 103px;
   }
 }

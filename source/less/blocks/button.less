@@ -1,7 +1,7 @@
 .button {
   display: block;
   width: 280px;
-  min-height: 55px; // margin: 0;
+  min-height: 55px;
   font-family: @default-font;
   font-size: 18px;
   font-weight: 700;
@@ -17,22 +17,58 @@
 }
 
 .button--white {
-  padding: 18px 0;
+  width: 274px;
   min-height: 0;
+  margin-top: 2px;
+  padding: 16px 0;
 
   border-color: @white;
+
+  &:hover {
+    color: @pink;
+
+    background-color: @white;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+
+    background-color: @white;
+  }
 }
 
 .button--pink {
   color: @pink;
 
   border-color: @pink;
+
+  &:hover {
+    color: @white;
+
+    background-color: @pink;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--gray {
   color: @blue-dark--opacity;
 
   border-color: @blue-dark--opacity;
+
+  &:hover {
+    color: rgba(40, 54, 69, 0.3);
+
+    border-color: rgba(40, 54, 69, 0.3);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: rgba(40, 54, 69, 0.3);
+  }
 }
 
 .button--form {
@@ -44,17 +80,42 @@
   background-color: @green;
   border: none;
   border-radius: 2px;
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .button--white {
+    width: 293px;
+  }
+
+  .button--form {
+    width: 299px;
+  }
+
   .button--photo {
     width: 260px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .button--white {
+    font-size: 21px;
+  }
+
   .button--photo {
-    width: 185px;
-    min-height: 50px;
+    width: 183px;
+    min-height: 55px;
   }
 }

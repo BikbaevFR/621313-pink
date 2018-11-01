@@ -9,15 +9,15 @@
   position: relative;
 
   .wrapper();
-  min-height: 270px;
   padding-top: 25px;
+  padding-bottom: 30px;
 }
 
 .download__wrapper::after {
   content: url("../img/iphone-hand-mobile@1x.png");
 
   position: absolute;
-  bottom: 289px;
+  bottom: 264px;
   left: 0;
 }
 
@@ -30,16 +30,26 @@
 }
 
 .download__button {
-  margin-bottom: 40px;
+  margin-bottom: 31px;
 }
 
 .download__list {
   .reset-list();
 
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+  justify-content: flex-start;
+  margin-bottom: 23px;
+  padding-left: 37px;
+
+  align-items: baseline;
+}
+
+.download__item:first-child {
+  margin-right: 34px;
+}
+
+.download__item:nth-child(2) {
+  margin-right: 37px;
 }
 
 .download__link::before {
@@ -49,7 +59,6 @@
 
   background-repeat: no-repeat;
 }
-
 
 .download__link--apple::before {
   width: 47px;
@@ -81,10 +90,18 @@
     background-color: transparent;
   }
 
+  .download__wrapper {
+    position: relative;
+
+    padding-top: 43px;
+
+    z-index: 1;
+  }
+
   .download__wrapper::after {
     content: url("../img/iphone-hand-tablet@1x.png");
 
-    bottom: -134px;
+    bottom: -87px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -101,7 +118,20 @@
     display: block;
     width: 200px;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 31px;
+  }
+
+  .download__button {
+    margin-bottom: 43px;
+  }
+
+  .download__list {
+    padding-left: 46px;
+    margin-bottom: 39px;
+  }
+
+  .download__text {
+    font-size: 18px;
   }
 }
 
@@ -113,10 +143,34 @@
   .download__wrapper::after {
     content: url("../img/iphone-hand-desktop@1x.png");
 
-    bottom: -279px;
+    bottom: -125px;
+    left: 551px;
   }
 
   .download__box {
     width: 370px;
+    padding-top: 108px;
+  }
+
+  .download__slogan {
+
+    width: 300px;
+    margin: 0;
+    margin-bottom: 51px;
+
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .download__button {
+    margin-bottom: 66px;
+  }
+
+  .download__list {
+    margin-bottom: 57px;
+  }
+
+  .download__text {
+    width: 300px;
   }
 }

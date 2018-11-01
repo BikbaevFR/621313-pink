@@ -1,3 +1,7 @@
+.inner-footer {
+  padding-bottom: 40px;
+}
+
 .inner-footer__wrapper {
   .wrapper();
   display: flex;
@@ -6,7 +10,7 @@
 }
 
 .inner-footer__logo-link {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 @media (min-width: @tablet-width) {
@@ -14,9 +18,17 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .inner-footer__logo-link {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .inner-footer {
+    padding-bottom: 70px;
+  }
+
   .inner-footer__wrapper {
     padding-right: 10px;
     padding-left: 10px;

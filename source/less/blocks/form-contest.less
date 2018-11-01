@@ -1,5 +1,6 @@
 .form-contest {
-  margin-bottom: 50px;
+  width: 100%;
+  margin-bottom: 55px;
 }
 
 .form-contest__wrapper {
@@ -9,7 +10,6 @@
 .form-contest__intro {
   width: 280px;
   margin: 0;
-  margin-bottom: 45px;
 
   line-height: 30px;
 }
@@ -19,15 +19,17 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form-contest {
+    margin-bottom: 86px;
+  }
+
   .form-contest__wrapper {
     padding-top: 95px;
   }
 
   .form-contest__intro {
     width: 500px;
-    margin: 0 auto;
-    margin-bottom: 75px;
-
+    margin: 0 auto; // margin-bottom: 75px;
     font-size: 18px;
   }
 
@@ -37,13 +39,16 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form-contest {
+    margin-bottom: 28px;
+  }
+
   .form-contest__wrapper {
-    padding-right: 10px;
-    padding-left: 10px;
+    margin-bottom: 29px;
   }
 
   .form-contest__intro {
-    width: 820px;
+    width: 800px;
   }
 
   .form-contest__intro--bottom {
