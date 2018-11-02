@@ -9,6 +9,7 @@
   position: relative;
 
   .wrapper();
+  margin-top: 397px;
   padding-top: 25px;
   padding-bottom: 30px;
 }
@@ -17,7 +18,7 @@
   content: "";
 
   position: absolute;
-  bottom: 264px;
+  bottom: 270px;
   left: 0;
 
   width: 258px;
@@ -28,7 +29,7 @@
   background-repeat: no-repeat;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../../img/iphone-hand-mobile@2x.png");
+    background-image: url("../img/iphone-hand-mobile@2x.png");
     background-size: 258px auto;
   }
 }
@@ -105,6 +106,7 @@
   .download__wrapper {
     position: relative;
 
+    margin-top: 50px;
     padding-top: 43px;
 
     z-index: 1;
@@ -113,7 +115,7 @@
   .download__wrapper::after {
     content: "";
 
-    bottom: -87px;
+    bottom: -81px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -159,13 +161,14 @@
 
 @media (min-width: @desktop-width) {
   .download__wrapper {
+    margin-top: 0;
     padding: 0 10px;
   }
 
   .download__wrapper::after {
     content: "";
 
-    bottom: -125px;
+    bottom: -119px;
     left: 551px;
 
     width: 1050px;

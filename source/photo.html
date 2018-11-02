@@ -215,9 +215,9 @@
       <div class="upload-photo__wrapper">
         <h2 class="visually-hidden">Загрузка и редактирование фотографий</h2>
         <picture class="upload-photo__picture">
-          <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg">
-          <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg">
-          <img class="upload-photo__image" src="img/photo-road-mobile@1x.jpg" alt="Загруженная фотография">
+          <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+          <img class="upload-photo__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg" alt="Загруженная фотография">
         </picture>
         <form class="upload-photo__form" action="https://echo.htmlacademy.ru" method="get">
           <ul class="upload-photo__list">
@@ -317,6 +317,7 @@
   <script>
   var navMain = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
+  var pageHeader = document.querySelector('.page-header');
 
   navMain.classList.remove('main-nav--nojs');
 
@@ -324,9 +325,11 @@
     if (navMain.classList.contains('main-nav--closed')) {
       navMain.classList.remove('main-nav--closed');
       navMain.classList.add('main-nav--opened', 'main-nav--opened-inner');
+      pageHeader.classList.add('page-header--bg-photo');
     } else {
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened', 'main-nav--opened-inner');
+      pageHeader.classList.remove('page-header--bg-photo');
     }
   });
 
