@@ -205,9 +205,9 @@
         <div class="contacts__map">
           <iframe src="https://yandex.ru/map-widget/v1/-/CBBkRBXpKB" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
           <picture>
-            <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg">
-            <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg">
-            <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+            <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+            <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" src="img/bg-map-mobile@2x.png 2x" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
           </picture>
         </div>
       </div>
@@ -240,6 +240,8 @@
   <script>
   var navMain = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
+  var pageHeader = document.querySelector('.page-header');
+
 
   navMain.classList.remove('main-nav--nojs');
 
@@ -247,9 +249,11 @@
     if (navMain.classList.contains('main-nav--closed')) {
       navMain.classList.remove('main-nav--closed');
       navMain.classList.add('main-nav--opened');
+      pageHeader.classList.add('page-header--bg');
     } else {
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened');
+      pageHeader.classList.remove('page-header--bg');
     }
   });
 

@@ -1,11 +1,16 @@
 .page-header {
-  position: relative; // min-height: 465px;
+  position: relative;
   color: @white;
 
   background-color: @blue-dark;
   background-image: url("../img/bg-back-tablet@1x.jpg");
   background-position: 50% 0%;
   background-repeat: no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 700px auto;
+  }
 }
 
 .page-header--inner {
@@ -22,8 +27,9 @@
 .page-header__title {
   margin: 0;
   padding: 0;
-
   .wrapper();
+  padding-top: 32px;
+  padding-bottom: 53px;
 
   font-size: 24px;
   font-weight: 300;
@@ -33,8 +39,12 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    min-height: 730px; // background-image: url("../img/bg-back-tablet@1x.jpg");
-    // background-position: 50% 0%;
+    min-height: 730px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 
   .page-header__wrapper {
@@ -49,6 +59,9 @@
   }
 
   .page-header__title {
+    padding-top: 69px;
+    padding-bottom: 81px;
+
     font-size: 50px;
     line-height: 60px;
   }
@@ -59,13 +72,52 @@
     min-height: 850px;
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 2560px auto;
+    }
   }
 
   .page-header--inner {
     min-height: 394px;
   }
 
+  .page-header__title {
+    padding: 0;
+  }
+
   .page-header__title--photo {
     width: 370px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .page-header--bg {
+    background-position: 50% 49%;
+  }
+
+  .page-header--bg-form {
+    background-position: 50% 100%;
+  }
+
+  .page-header--bg-photo {
+    background-position: 50% 4335%;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+  .page-header--bg {
+    padding-bottom: 81px;
+
+    background-position: 50% 99%;
+  }
+
+  .page-header--bg-form {
+    background-position: 50% -800%;
+  }
+
+  .page-header--bg-photo {
+    background-position: 50% -280%;
   }
 }
