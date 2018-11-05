@@ -19,6 +19,24 @@
   height: 22px;
 }
 
+.main-nav__logo-image {
+  display: none;
+
+  fill: @white;
+}
+
+.main-nav__logo-link[href]:hover .main-nav__logo-image {
+  fill: @pink;
+}
+
+.main-nav__logo-link[href]:active .main-nav__logo-image {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.main-nav__logo-image--white-mobile {
+  display: block;
+}
+
 .main-nav__toggle {
   position: absolute;
   top: 20px;
@@ -110,6 +128,14 @@
     margin-top: -18px;
   }
 
+  .main-nav__logo-image--white-mobile {
+    display: none;
+  }
+
+  .main-nav__logo-image--white-tablet {
+    display: block;
+  }
+
   .main-nav__toggle {
     top: 44px;
   }
@@ -130,6 +156,14 @@
     padding: 44px 0;
 
     background-color: transparent;
+  }
+
+  .main-nav__logo-image--white-tablet {
+    display: none;
+  }
+
+  .main-nav__logo-image--white-desktop {
+    display: block;
   }
 
   .main-nav__toggle {

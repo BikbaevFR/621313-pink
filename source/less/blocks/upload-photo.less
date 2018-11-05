@@ -53,11 +53,20 @@
 
   background-color: transparent;
   border: none;
+
+  cursor: pointer;
 }
 
-.upload-photo__instrument-icon path,
-.upload-photo__instrument-icon rect {
+.upload-photo__item--active .upload-photo__instrument-icon {
   fill: @pink;
+}
+
+.upload-photo__instrument-icon {
+  fill: rgba(40, 54, 69, 0.3);
+}
+
+.upload-photo__instrument-icon:hover {
+  fill: rgba(40, 54, 69, 0.5);
 }
 
 .upload-photo__range {
@@ -173,6 +182,8 @@
 
   .upload-photo__instrument-icon {
     position: absolute;
+
+    fill: @pink;
   }
 
   .upload-photo__instrument-icon--crop {
