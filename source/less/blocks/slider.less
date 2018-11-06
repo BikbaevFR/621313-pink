@@ -19,16 +19,16 @@
   height: 6px;
 
   border: 3px solid @white;
-  background-color: rgba(40, 54, 69, 0.3);
+  background-color: rgba(@blue-dark, 0.3);
   border-radius: 50%;
 }
 
 .slider__toggle:hover::before {
-  background-color: rgba(40, 54, 69, 0.6);
+  background-color: rgba(@blue-dark, 0.6);
 }
 
 .slider__toggle:active::before {
-  background-color: rgba(40, 54, 69, 0.1);
+  background-color: rgba(@blue-dark, 0.1);
 }
 
 .slider__toggle--active::before {
@@ -46,7 +46,7 @@
 
   background-color: @white;
   outline: none;
-  border: 2px solid rgba(40, 54, 69, 0.3);
+  border: 2px solid rgba(@blue-dark, 0.3);
   opacity: 0.3;
 
   transform: rotate(45deg);
@@ -55,11 +55,11 @@
   z-index: 3;
 
   &:hover {
-    border-color: rgba(40, 54, 69, 0.6);
+    border-color: rgba(@blue-dark, 0.6);
   }
 
   &:active {
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(@white, 0.1);
   }
 }
 

@@ -100,15 +100,21 @@
   border: none;
 }
 
-.user-block__button::before {
-  content: url("../img/icon-heart.svg");
-
+.user-block__icon-heart {
   position: absolute;
   left: 1px;
   top: -10px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
+
+// .user-block__button::before {
+//   content: url("../img/icon-heart.svg");
+
+//   position: absolute;
+//   left: 1px;
+//   top: -10px;
+//   background-repeat: no-repeat;
+//   background-position: 50% 50%;
+// }
 
 .user-block__inscription {
   margin-left: 16px;
@@ -178,13 +184,13 @@
     padding: 0;
   }
 
-  .user-block__button::before {
-    top: 3px;
+  .user-block__icon-heart {
+    top: 5px;
     left: -18px;
   }
 
-  .user-block__comment-footer--panorama .user-block__button::before {
-    top: 5px;
+  .user-block__comment-footer--panorama .user-block__icon-heart {
+    top: 6px;
     left: -15px;
   }
 
@@ -218,7 +224,7 @@
     width: 125px;
   }
 
-  .user-block__comment-footer--panorama .user-block__button::before {
+  .user-block__comment-footer--panorama .user-block__icon-heart {
     left: -17px;
   }
 

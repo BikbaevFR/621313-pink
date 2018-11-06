@@ -4,7 +4,6 @@
   align-items: center;
   width: 132px;
   margin: 0 auto;
-  // margin-bottom: 40px;
 }
 
 .copyright__text {
@@ -15,19 +14,25 @@
 .copyright__link {
   position: relative;
 
-  width: 27px;
-  height: 34px;
+  display: block;
+  width: 42px;
+  height: 49px;
 }
 
-.copyright__link::before {
-  content: url("../img/logo-htmlacademy.svg");
-
+.copyright__icon {
   position: absolute;
-  top: 3px;
-  left: -2px;
+  top: 2px;
+  left: 4px;
 
-  width: 27px;
-  height: 34px;
+  fill: @pink;
+}
+
+.copyright__link:hover .copyright__icon {
+  fill: @blue-dark;
+}
+
+.copyright__link:active .copyright__icon {
+  fill: rgba(@blue-dark, 0.3);
 }
 
 @media (min-width: @tablet-width) {
@@ -39,10 +44,6 @@
 
   .copyright__text {
     font-size: 14px;
-  }
-
-  .copyright__link::before {
-    left: 0;
   }
 }
 

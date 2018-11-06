@@ -44,6 +44,29 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("source/img"));
 });
 
+gulp.task("sprite", function () {
+  return gulp.src(["source/img/logo-pink-*.svg",
+    "source/img/icon-editor-*.svg",
+    "source/img/icon-twitter.svg",
+    "source/img/icon-facebook.svg",
+    "source/img/icon-youtube.svg",
+    "source/img/htmlacademy.svg",
+    "source/img/icon-heart.svg"])
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("source"));
+});
+
 gulp.task("server", function () {
   server.init({
     server: "source/",
