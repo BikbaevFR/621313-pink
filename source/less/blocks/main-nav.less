@@ -1,7 +1,7 @@
 .main-nav {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 320px;
   margin: 0 auto;
 }
 
@@ -118,8 +118,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav {
+    width: 660px;
+  }
+
   .main-nav__top {
-    padding: 44px 3.0303030303%;
+    padding: 44px 20px;
   }
 
   .main-nav__logo-link {

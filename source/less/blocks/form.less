@@ -119,6 +119,10 @@
   &:active {
     border-color: @pink;
   }
+
+  &:invalid {
+    background-color: #f6dada;
+  }
 }
 
 .form__block--emotions .form__text {
@@ -134,6 +138,23 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
+  color: @blue-dark;
+}
+
+
+.form__text::-webkit-input-placeholder {
+  font-family: @default-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: @blue-dark;
+}
+
+.form__text::-moz-placeholder {
+  font-family: @default-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 60px;
   color: @blue-dark;
 }
 
@@ -336,6 +357,7 @@
   }
 
   .form__block--os .form__item {
+    justify-content: flex-start;
     margin-bottom: 25px;
   }
 
@@ -417,6 +439,7 @@
   }
 
   .form__block--progress .form__item {
+    justify-content: flex-start;
     margin-bottom: 32px;
   }
 
