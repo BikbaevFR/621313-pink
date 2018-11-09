@@ -120,7 +120,7 @@
     border-color: @pink;
   }
 
-  &:invalid {
+  &:invalid:not(:focus):not(:placeholder-shown) {
     background-color: #f6dada;
   }
 }
@@ -480,6 +480,10 @@
     padding-left: 18px;
 
     background-image: linear-gradient(to right, @white 88%, @gray-light 88%);
+
+    &:invalid:not(:focus):not(:placeholder-shown) {
+      background-image: linear-gradient(#f6dada);
+    }
   }
 
   .form__block--emotions .form__text {
