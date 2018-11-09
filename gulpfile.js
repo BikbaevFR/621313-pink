@@ -11,7 +11,9 @@ var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
+var htmlmin = require("gulp-htmlmin");
 var include = require("posthtml-include");
+var uglify = require("gulp-uglify");
 var server = require("browser-sync").create();
 var del = require("del");
 
@@ -27,6 +29,30 @@ gulp.task("css", function() {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
+});
+
+gulp.task("js-index", function() {
+    return gulp.src("source/js/scripts-index.js")
+        .pipe(uglify())
+        .pipe(rename("scripts-index.min.js"))
+        .pipe(gulp.dest("build/js"))
+        .pipe(server.stream());
+});
+
+gulp.task("js-form", function() {
+    return gulp.src("source/js/scripts-form.js")
+        .pipe(uglify())
+        .pipe(rename("scripts-form.min.js"))
+        .pipe(gulp.dest("build/js"))
+        .pipe(server.stream());
+});
+
+gulp.task("js-photo", function() {
+    return gulp.src("source/js/scripts-photo.js")
+        .pipe(uglify())
+        .pipe(rename("scripts-photo.min.js"))
+        .pipe(gulp.dest("build/js"))
+        .pipe(server.stream());
 });
 
 gulp.task("images", function() {
@@ -66,6 +92,7 @@ gulp.task("html", function() {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 
@@ -79,6 +106,7 @@ gulp.task("server", function() {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/js/**/*.js", gulp.series("js"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
@@ -86,7 +114,7 @@ gulp.task("copy", function() {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
       "source/img/**",
-      "source/js/**"
+      "source/js/picturefill.min.js"
     ], {
       base: "source"
     })
@@ -103,12 +131,19 @@ gulp.task("refresh", function(done) {
   done();
 });
 
+gulp.task("js", gulp.series(
+  "js-index",
+  "js-form",
+  "js-photo"
+));
+
 gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
   "sprite",
-  "html"
+  "html",
+  "js"
 ));
 
 gulp.task("start", gulp.series("build", "server"));
