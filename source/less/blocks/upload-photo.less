@@ -29,12 +29,13 @@
 }
 
 .upload-photo__list {
-  .reset-list();
+  position: relative;
 
+  .reset-list();
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  margin-bottom: 3px;
+  margin-bottom: 77px;
 }
 
 .upload-photo__item--crop {
@@ -53,19 +54,25 @@
 
   background-color: transparent;
   border: none;
+
+  cursor: pointer;
 }
 
-.upload-photo__instrument-icon path,
-.upload-photo__instrument-icon rect {
+.upload-photo__item--active .upload-photo__instrument-icon {
   fill: @pink;
 }
 
-.upload-photo__range {
-  width: 240px;
+.upload-photo__instrument-icon {
+  fill: rgba(@blue-dark, 0.3);
 }
 
-.upload-photo__range--none {
+.upload-photo__instrument-icon:hover {
+  fill: rgba(@blue-dark, 0.5);
+}
+
+.upload-photo__range {
   display: none;
+  width: 240px;
 }
 
 .upload-photo__range-controls {
@@ -75,7 +82,7 @@
 .upload-photo__range-scale {
   height: 2px;
 
-  background-color: #283645;
+  background-color: @blue-dark;
 }
 
 .upload-photo__range-toggle {
@@ -97,9 +104,12 @@
   }
 }
 
-.upload-photo__range-bottom {
-  margin: 0 auto;
-  margin-bottom: 72px;
+.upload-photo__item--active .upload-photo__range {
+  position: absolute;
+  bottom: -5px;
+  left: 18px;
+
+  display: block;
 }
 
 .upload-photo__post {
@@ -128,8 +138,8 @@
     width: 202px;
   }
 
-  .upload-photo__range-bottom {
-    display: none;
+  .upload-photo__item--active .upload-photo__range {
+    position: static;
   }
 
   .upload-photo__list {
@@ -173,6 +183,8 @@
 
   .upload-photo__instrument-icon {
     position: absolute;
+
+    fill: @pink;
   }
 
   .upload-photo__instrument-icon--crop {

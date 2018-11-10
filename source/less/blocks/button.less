@@ -31,7 +31,7 @@
   }
 
   &:active {
-    color: rgba(210, 40, 86, 0.3);
+    color: rgba(@pink, 0.3);
 
     background-color: @white;
   }
@@ -49,7 +49,7 @@
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(@white, 0.3);
   }
 }
 
@@ -59,15 +59,15 @@
   border-color: @blue-dark--opacity;
 
   &:hover {
-    color: rgba(40, 54, 69, 0.3);
+    color: rgba(@blue-dark, 0.3);
 
-    border-color: rgba(40, 54, 69, 0.3);
+    border-color: rgba(@blue-dark, 0.3);
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(@white, 0.3);
 
-    background-color: rgba(40, 54, 69, 0.3);
+    background-color: rgba(@blue-dark, 0.3);
   }
 }
 
@@ -83,15 +83,15 @@
 
   &:hover,
   &:focus {
-    background-color: #1c9b5e;
+    background-color: @green-dark;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(@white, 0.3);
   }
 
   &:disabled {
-    background-color: #e5e5e5;
+    background-color: @gray-light;
   }
 }
 

@@ -2,33 +2,18 @@
   position: relative;
 
   background-color: @white--dark;
-}
-
-.price::before {
-  content: "";
-
-  position: absolute;
-  left: calc(-50vw + 50%);
-
-  display: block;
-  width: 100vw;
-
-  height: 150px;
-  background-color: @white--dark;
-  transform: rotate(-4deg);
-  top: -32px;
-
-  overflow: hidden;
-
-  z-index: 2;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: 101% auto;
+  background-position: 50% 0;
 }
 
 .price__wrapper {
   position: relative;
 
   .wrapper();
-  padding-top: 47px;
-  padding-bottom: 45px;
+  padding-top: 91px;
+  padding-bottom: 47px;
 
   overflow: hidden;
 
@@ -51,11 +36,14 @@
   display: none;
 }
 
+.price tr {
+  background-color: @white;
+}
+
 .price__plans td {
   height: 58px;
 
-  background-color: @white;
-  border: 2px solid #e5e5e5;
+  border: 2px solid @gray-light;
 }
 
 .price__feature-name {
@@ -78,8 +66,8 @@
   color: @white;
 
   background-color: @blue-dark;
-  border-left: 2px solid #e5e5e5;
-  border-right: 2px solid #e5e5e5;
+  border-left: 2px solid @gray-light;
+  border-right: 2px solid @gray-light;
 }
 
 .price__plan-head--hit {
@@ -172,16 +160,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .price::before {
-    top: -40px;
-
-    height: 200px;
-
-    transform: rotate(-4.2deg);
-  }
-
   .price__wrapper {
-    padding-top: 20px;
+    padding-top: 88px;
     padding-bottom: 38px;
   }
 
@@ -238,6 +218,10 @@
     text-transform: none;
   }
 
+  .price__cell--head {
+    background-color: @white--dark;
+  }
+
   .price__feature-name {
     font-size: 0;
   }
@@ -258,16 +242,12 @@
 }
 
 @media (min-width: @desktop-width) {
-  .price::before {
-    top: -52px;
-
-    height: 250px;
-
-    transform: rotate(-3.9deg);
+  .price {
+    background-image: url("../img/bg-triangle-white-desktop.svg");
   }
 
   .price__wrapper {
-    padding-top: 55px;
+    padding-top: 159px;
     padding-bottom: 66px;
   }
 
