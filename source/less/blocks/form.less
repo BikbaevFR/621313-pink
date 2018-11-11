@@ -184,14 +184,14 @@
   cursor: pointer;
 }
 
-.form__input--checkbox + .form__field:hover::before {
+.form__input--checkbox + .form__field:hover::before,
+.form__input--checkbox:focus + .form__field::before {
   border-color: @blue-dark;
 }
 
 .form__input--checkbox + .form__field:active::before {
   border-color: @pink;
 }
-
 
 .form__input--checkbox:checked + .form__field::after {
   content: "";
@@ -214,7 +214,6 @@
   &:hover,
   &:focus {
     border-color: @blue-dark;
-    outline: none;
   }
 
   &:active {
@@ -255,7 +254,8 @@
   cursor: pointer;
 }
 
-.form__input--radio + .form__field:hover::before {
+.form__input--radio + .form__field:hover::before,
+.form__input--radio:focus + .form__field::before {
   border-color: @blue-dark;
 }
 
