@@ -62,13 +62,6 @@
   margin: 0;
 }
 
-.user-block__comment-footer {
-  margin: 0;
-  margin-bottom: 3px;
-
-  cursor: pointer;
-}
-
 .user-block--panorama .user-block__image {
   display: block;
   width: 100vw;
@@ -93,32 +86,31 @@
   margin-bottom: 9px;
 }
 
+.user-block__comment-footer {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 3px;
+
+  cursor: pointer;
+}
+
 .user-block__button {
   position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13px;
+  height: 12px;
+  margin-right: 19px;
+  padding: 0;
 
   background-color: transparent;
   border: none;
 }
 
-.user-block__icon-heart {
-  position: absolute;
-  left: 1px;
-  top: -10px;
-}
-
-// .user-block__button::before {
-//   content: url("../img/icon-heart.svg");
-
-//   position: absolute;
-//   left: 1px;
-//   top: -10px;
-//   background-repeat: no-repeat;
-//   background-position: 50% 50%;
-// }
-
 .user-block__inscription {
-  margin-left: 16px;
-
   font-size: 12px;
   text-transform: uppercase;
   color: @pink;
@@ -126,7 +118,8 @@
 
 @media (min-width: @tablet-width) {
   .user-block__image--first {
-    // height: 509px;
+    /* Временно */
+    height: 509px;
   }
 
   .user-block--panorama {
@@ -141,6 +134,7 @@
     width: 300px;
     padding: 0 27px;
     padding-top: 23px;
+    padding-right: 32px;
   }
 
   .user-block--body .user-block__comment {
@@ -154,6 +148,7 @@
     width: 620px;
     padding: 0 27px;
     padding-top: 23px;
+    padding-right: 29px;
     margin-bottom: 51px;
   }
 
@@ -170,28 +165,18 @@
   }
 
   .user-block__comment-footer {
-    display: flex;
     justify-content: space-between;
     margin: 0;
   }
 
   .user-block__comment-footer--panorama {
-    width: 121px;
+    width: 120px;
   }
 
   .user-block__button {
     order: 2;
+    margin-right: 0;
     padding: 0;
-  }
-
-  .user-block__icon-heart {
-    top: 5px;
-    left: -18px;
-  }
-
-  .user-block__comment-footer--panorama .user-block__icon-heart {
-    top: 6px;
-    left: -15px;
   }
 
   .user-block__inscription {
@@ -205,7 +190,7 @@
     // transform: translateX(-50%);
 
     // width: 1200px;
-    // height: 507px;
+    height: 507px;
     // margin: 0 auto;
   }
 
@@ -218,14 +203,7 @@
     margin-bottom: 50px;
     padding: 0 27px;
     padding-top: 22px;
-  }
-
-  .user-block__comment-footer--panorama {
-    width: 125px;
-  }
-
-  .user-block__comment-footer--panorama .user-block__icon-heart {
-    left: -17px;
+    padding-right: 32px;
   }
 
   .user-block__comment-text--panorama {
