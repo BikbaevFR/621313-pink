@@ -32,11 +32,11 @@ gulp.task("css", function() {
 });
 
 gulp.task("js", function() {
-    return gulp.src("source/js/scripts.js")
-        .pipe(uglify())
-        .pipe(rename("scripts.min.js"))
-        .pipe(gulp.dest("build/js"))
-        .pipe(server.stream());
+  return gulp.src("source/js/scripts.js")
+    .pipe(uglify())
+    .pipe(rename("scripts.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(server.stream());
 });
 
 gulp.task("images", function() {
@@ -56,7 +56,8 @@ gulp.task("webp", function() {
 });
 
 gulp.task("sprite", function() {
-  return gulp.src(["source/img/logo-pink-*.svg",
+  return gulp.src(["source/img/logo-pink-white.svg",
+      "source/img/logo-pink-blue.svg",
       "source/img/icon-editor-*.svg",
       "source/img/icon-twitter.svg",
       "source/img/icon-facebook.svg",

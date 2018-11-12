@@ -10,12 +10,15 @@
 }
 
 .inner-footer__logo-link {
+  width: 147px;
+  height: 40px;
+  margin: 0 auto;
   margin-bottom: 40px;
 }
 
 .inner-footer__logo-image {
-  display: none;
-  margin: 0 auto;
+  width: 147px;
+  height: 40px;
 
   fill: @blue-dark;
 }
@@ -29,8 +32,8 @@
   opacity: 0.3;
 }
 
-.inner-footer__logo-image--blue-mobile {
-  display: block;
+.inner-footer__logo-desktop {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -40,7 +43,7 @@
   }
 
   .inner-footer__logo-link {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
@@ -54,11 +57,11 @@
     padding-left: 10px;
   }
 
-  .inner-footer__logo-image--blue-mobile {
+  .inner-footer__logo-mobile-glasses {
     display: none;
   }
 
-  .inner-footer__logo-image--blue-desktop {
-    display: block;
+  .inner-footer__logo-desktop {
+    display: inline-block;
   }
 }
