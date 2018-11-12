@@ -93,17 +93,20 @@
 }
 
 @media (max-width: @tablet-width-only) {
-  .page-header--bg {
+  .page-header--bg,
+  .page-header--nojs {
     background-position: 50% 261px;
   }
 }
 
 @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-  .page-header--bg {
+  .page-header--bg,
+  .page-header--nojs {
     padding-bottom: 81px;
   }
 
-  .inner-page .page-header--bg {
+  .inner-page .page-header--bg,
+  .inner-page .page-header--nojs {
     padding-bottom: 0;
   }
 }
