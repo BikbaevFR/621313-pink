@@ -62,7 +62,7 @@ gulp.task("sprite", function() {
       "source/img/icon-twitter.svg",
       "source/img/icon-facebook.svg",
       "source/img/icon-youtube.svg",
-      "source/img/htmlacademy.svg",
+      "source/img/logo-htmlacademy.svg",
       "source/img/icon-heart.svg"
     ])
     .pipe(svgstore({
