@@ -16,16 +16,14 @@
   <div style="display:none">
     <include src="build/img/sprite.svg"></include>
   </div>
-  <header class="page-header">
+  <header class="page-header page-header--nojs">
     <div class="page-header__wrapper">
       <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__top-wrapper">
           <div class="main-nav__top">
             <a class="main-nav__logo-link">
-            <svg class="main-nav__logo-image main-nav__logo-image--white-mobile" width="75" height="22"><use xlink:href="#logo-pink-white-mobile"></use></svg>
-            <svg class="main-nav__logo-image main-nav__logo-image--white-tablet" width="147" height="40"><use xlink:href="#logo-pink-white-tablet"></use></svg>
-            <svg class="main-nav__logo-image main-nav__logo-image--white-desktop" width="147" height="40"><use xlink:href="#logo-pink-white-desktop"></use></svg>
-          </a>
+            <svg class="main-nav__logo-image" width="147" height="40"><use xlink:href="#logo-pink-white"></use></svg>
+            </a>
             <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/Закрыть меню</span></button>
           </div>
         </div>
@@ -72,12 +70,15 @@
   <main class="page-main">
     <h1 class="visually-hidden">Приложение «Пинк»</h1>
     <section class="advantages">
-      <div class="advantages__wrapper">
+      <div class="advantages__header-wrapper">
         <header class="advantages__header">
           <h2 class="visually-hidden">Наши преимущества</h2>
           <p class="advantages__text">Устали от серости мегаполиса?</p>
           <p class="advantages__text advantages__text--bottom">Нам есть, что вам предложить!</p>
         </header>
+      </div>
+      <div class="advantages__wrapper">
+        <div class="advantages__list-wrapper">
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--mood">
             <h3 class="advantages__title">Поднимает настроение</h3>
@@ -92,6 +93,7 @@
             <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
+      </div>
       </div>
     </section>
     <section class="study">
@@ -130,8 +132,8 @@
             <p class="reviews__text">«!иифарготоф йоннежолыв к хяиратнеммок в йонеж йещудуб йеовс ос яслимоканзоп я еще А !ищев еырес еынчывирп ан ьтунялгзв умовон-оп олиловзоп и рим йом олунревереп еинежолирп отЭ»</p>
           </blockquote>
         </div>
-        <button class="slider__review-toggle slider__review-toggle--prev"></button>
-        <button class="slider__review-toggle slider__review-toggle--next"></button>
+        <button class="slider__review-toggle slider__review-toggle--prev"><span class="visually-hidden">Назад</span></button>
+        <button class="slider__review-toggle slider__review-toggle--next"><span class="visually-hidden">Вперед</span></button>
         <p class="reviews__toggles slider__toggles">
           <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">1</span></button>
           <button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
@@ -143,7 +145,7 @@
       <div class="price__wrapper slider">
         <h2 class="visually-hidden">Наши цены</h2>
         <table class="price__plans">
-          <tr>
+          <tr class="price__row price__row--head">
             <th class="price__cell price__cell--head"></th>
             <th class="price__plan-head">
               <b class="price__plan-name">База</b>
@@ -230,8 +232,7 @@
       <div class="page-footer__inner-footer inner-footer">
         <div class="inner-footer__wrapper">
           <a class="inner-footer__logo-link">
-            <svg class="inner-footer__logo-image inner-footer__logo-image--blue-mobile" width="147" height="40"><use xlink:href="#logo-pink-blue-mobile"></use></svg>
-            <svg class="inner-footer__logo-image inner-footer__logo-image--blue-desktop" width="147" height="40"><use xlink:href="#logo-pink-blue-desktop"></use></svg>
+            <svg class="inner-footer__logo-image" width="147" height="40"><use xlink:href="#logo-pink-blue"></use></svg>
           </a>
           <div class="inner-footer__social social">
             <ul class="social__list">
@@ -250,7 +251,7 @@
           </div>
           <div class="inner-footer__copyright copyright">
             <b class="copyright__text">Разработано:</b>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">HTML Academy</span><svg class="copyright__icon" width="42" height="49"><use xlink:href="#htmlacademy"></use></svg></a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">HTML Academy</span><svg class="copyright__icon" width="27" height="34"><use xlink:href="#logo-htmlacademy"></use></svg></a>
           </div>
         </div>
       </div>

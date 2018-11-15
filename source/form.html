@@ -16,15 +16,13 @@
   <div style="display:none">
     <include src="build/img/sprite.svg"></include>
   </div>
-  <header class="page-header page-header--inner">
+  <header class="page-header page-header--inner page-header--nojs">
     <div class="page-header__wrapper">
       <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs main-nav--inner">
         <div class="main-nav__top-wrapper">
           <div class="main-nav__top">
             <a class="main-nav__logo-link" href="index.html">
-            <svg class="main-nav__logo-image main-nav__logo-image--white-mobile" width="75" height="22"><use xlink:href="#logo-pink-white-mobile"></use></svg>
-            <svg class="main-nav__logo-image main-nav__logo-image--white-tablet" width="147" height="40"><use xlink:href="#logo-pink-white-tablet"></use></svg>
-            <svg class="main-nav__logo-image main-nav__logo-image--white-desktop" width="147" height="40"><use xlink:href="#logo-pink-white-desktop"></use></svg>
+            <svg class="main-nav__logo-image" width="147" height="40"><use xlink:href="#logo-pink-white"></use></svg>
           </a>
             <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/Закрыть меню</span></button>
           </div>
@@ -74,7 +72,7 @@
           </fieldset>
         </div>
         <div class="form__container form__container--progress">
-          <fieldset class="form__block form__block--progress">
+          <fieldset class="form__block form__block--progress form__block--legend">
             <legend class="form__block-title">Ваши безбашенные достижения в путешествии</legend>
             <ul class="form__list form__list--progress form__list--wrapper">
               <li class="form__item form__item--field form__item--wrapper">
@@ -105,7 +103,7 @@
           </fieldset>
         </div>
         <div class="form__container form__container--contacts">
-          <fieldset class="form__block form__block--contacts">
+          <fieldset class="form__block form__block--contacts form__block--legend">
             <legend class="form__block-title form__block-title--hidden">Контактная информация</legend>
             <ul class="form__list form__list--contacts form__list--wrapper">
               <li class="form__item form__item--phone form__item--wrapper">
@@ -120,7 +118,7 @@
           </fieldset>
         </div>
         <div class="form__container form__container--os">
-          <fieldset class="form__block form__block--os">
+          <fieldset class="form__block form__block--os form__block--legend">
             <legend class="form__block-title">С каким приложением путешествовали?</legend>
             <ul class="form__list form__list--wrapper">
               <li class="form__item form__item--field form__item--wrapper">
@@ -139,18 +137,18 @@
           </fieldset>
         </div>
         <div class="form__container form__container--emotions">
-          <fieldset class="form__block form__block--emotions">
+          <fieldset class="form__block form__block--emotions form__block--legend">
             <legend class="form__block-title">Опишите свои эмоции</legend>
-            <div class="form__list--wrapper">
+            <div class="form__list form__list--wrapper">
               <p class="form__item form__item--wrapper">
-                <textarea class="form__text" id="emotions" name="text" cols="30" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                <textarea class="form__text" id="emotions" name="text" cols="30" rows="2" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </p>
             </div>
           </fieldset>
         </div>
         <p class="form__footer">
           <button class="form__button button button--form" type="submit">Отправить форму</button>
-          <small class="form__legend"><sup class="form__legend-star">*</sup> — обязательные <span class="form__legend--hidden">для заполнения</span> поля</small>
+          <small class="form__legend"><sup class="form__legend-star">*</sup> — обязательные <span class="form__legend form__legend--hidden">для заполнения</span> поля</small>
         </p>
       </form>
     </section>
@@ -158,8 +156,7 @@
   <footer class="inner-footer">
     <div class="inner-footer__wrapper">
       <a class="inner-footer__logo-link" href="index.html">
-        <svg class="inner-footer__logo-image inner-footer__logo-image--blue-mobile" width="147" height="40"><use xlink:href="#logo-pink-blue-mobile"></use></svg>
-        <svg class="inner-footer__logo-image inner-footer__logo-image--blue-desktop" width="147" height="40"><use xlink:href="#logo-pink-blue-desktop"></use></svg>
+        <svg class="inner-footer__logo-image" width="147" height="40"><use xlink:href="#logo-pink-blue"></use></svg>
       </a>
       <div class="inner-footer__social social">
         <ul class="social__list">
@@ -178,7 +175,7 @@
       </div>
       <div class="inner-footer__copyright copyright">
         <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">HTML Academy</span><svg class="copyright__icon" width="42" height="49"><use xlink:href="#htmlacademy"></use></svg></a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">HTML Academy</span><svg class="copyright__icon" width="27" height="34"><use xlink:href="#logo-htmlacademy"></use></svg></a>
       </div>
     </div>
   </footer>

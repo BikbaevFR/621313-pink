@@ -9,6 +9,7 @@
   <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link rel="preload" href="fonts/opensanslight.woff2" as="font">
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <script src="js/ofi.min.js"></script>
   <script async src="js/picturefill.min.js"></script>
 </head>
 
@@ -16,15 +17,13 @@
   <div style="display:none">
     <include src="build/img/sprite.svg"></include>
   </div>
-  <header class="page-header page-header--inner">
+  <header class="page-header page-header--inner page-header--nojs">
     <div class="page-header__wrapper">
       <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs main-nav--inner">
         <div class="main-nav__top-wrapper">
           <div class="main-nav__top">
             <a class="main-nav__logo-link" href="index.html">
-            <svg class="main-nav__logo-image main-nav__logo-image--white-mobile" width="75" height="22"><use xlink:href="#logo-pink-white-mobile"></use></svg>
-            <svg class="main-nav__logo-image main-nav__logo-image--white-tablet" width="147" height="40"><use xlink:href="#logo-pink-white-tablet"></use></svg>
-            <svg class="main-nav__logo-image main-nav__logo-image--white-desktop" width="147" height="40"><use xlink:href="#logo-pink-white-desktop"></use></svg>
+            <svg class="main-nav__logo-image" width="147" height="40"><use xlink:href="#logo-pink-white"></use></svg>
           </a>
             <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/Закрыть меню</span></button>
           </div>
@@ -220,7 +219,7 @@
                 </p>
               </figcaption>
             </figure>
-            <figure class="photo__item user-block user-block--body">
+            <figure class="photo__item user-block user-block--body user-block--last">
               <p class="user-block__picture">
                 <a class="user-block__link" href="#">
                   <picture>
@@ -267,50 +266,56 @@
           <form class="upload-photo__form" action="https://echo.htmlacademy.ru" method="get">
             <ul class="upload-photo__list">
               <li class="upload-photo__item upload-photo__item--crop upload-photo__item--active">
-                <button class="upload-photo__instrument upload-photo__instrument--crop" type="button">
-                  <svg class="upload-photo__instrument-icon upload-photo__instrument-icon--crop" width="48" height="48">
-                    <use xlink:href="#icon-editor-crop"></use>
-                  </svg>
-                  <span class="visually-hidden">Обрезать</span>
-                </button>
-                <div class="upload-photo__range">
-                  <div class="upload-photo__range-controls">
-                    <div class="upload-photo__range-scale">
-                      <div class="upload-photo__range-bar"></div>
+                <div class="upload-photo__item-wrapper">
+                  <button class="upload-photo__instrument upload-photo__instrument--crop" type="button">
+                    <svg class="upload-photo__instrument-icon upload-photo__instrument-icon--crop" width="48" height="48">
+                      <use xlink:href="#icon-editor-crop"></use>
+                    </svg>
+                    <span class="visually-hidden">Обрезать</span>
+                  </button>
+                  <div class="upload-photo__range">
+                    <div class="upload-photo__range-controls">
+                      <div class="upload-photo__range-scale">
+                        <div class="upload-photo__range-bar"></div>
+                      </div>
+                      <div class="upload-photo__range-toggle"></div>
                     </div>
-                    <div class="upload-photo__range-toggle"></div>
                   </div>
                 </div>
               </li>
               <li class="upload-photo__item upload-photo__item--fill">
-                <button class="upload-photo__instrument upload-photo__instrument--fill" type="button">
-                  <svg class="upload-photo__instrument-icon upload-photo__instrument-icon--fill" width="48" height="48">
-                    <use xlink:href="#icon-editor-fill"></use>
-                  </svg>
-                  <span class="visually-hidden">Заливка</span>
-                </button>
-                <div class="upload-photo__range">
-                  <div class="upload-photo__range-controls">
-                    <div class="upload-photo__range-scale">
-                      <div class="upload-photo__range-bar"></div>
+                <div class="upload-photo__item-wrapper">
+                  <button class="upload-photo__instrument upload-photo__instrument--fill" type="button">
+                    <svg class="upload-photo__instrument-icon upload-photo__instrument-icon--fill" width="48" height="48">
+                      <use xlink:href="#icon-editor-fill"></use>
+                    </svg>
+                    <span class="visually-hidden">Заливка</span>
+                  </button>
+                  <div class="upload-photo__range">
+                    <div class="upload-photo__range-controls">
+                      <div class="upload-photo__range-scale">
+                        <div class="upload-photo__range-bar"></div>
+                      </div>
+                      <div class="upload-photo__range-toggle"></div>
                     </div>
-                    <div class="upload-photo__range-toggle"></div>
                   </div>
                 </div>
               </li>
               <li class="upload-photo__item upload-photo__item--contrast">
-                <button class="upload-photo__instrument upload-photo__instrument--contrast" type="button">
-                  <svg class="upload-photo__instrument-icon upload-photo__instrument-icon--contrast" width="32" height="32">
-                    <use xlink:href="#icon-editor-contrast"></use>
-                  </svg>
-                  <span class="visually-hidden">Контрастность</span>
-                </button>
-                <div class="upload-photo__range">
-                  <div class="upload-photo__range-controls">
-                    <div class="upload-photo__range-scale">
-                      <div class="upload-photo__range-bar"></div>
+                <div class="upload-photo__item-wrapper">
+                  <button class="upload-photo__instrument upload-photo__instrument--contrast" type="button">
+                    <svg class="upload-photo__instrument-icon upload-photo__instrument-icon--contrast" width="32" height="32">
+                      <use xlink:href="#icon-editor-contrast"></use>
+                    </svg>
+                    <span class="visually-hidden">Контрастность</span>
+                  </button>
+                  <div class="upload-photo__range">
+                    <div class="upload-photo__range-controls">
+                      <div class="upload-photo__range-scale">
+                        <div class="upload-photo__range-bar"></div>
+                      </div>
+                      <div class="upload-photo__range-toggle"></div>
                     </div>
-                    <div class="upload-photo__range-toggle"></div>
                   </div>
                 </div>
               </li>
@@ -326,8 +331,7 @@
   <footer class="inner-footer">
     <div class="inner-footer__wrapper">
       <a class="inner-footer__logo-link" href="index.html">
-        <svg class="inner-footer__logo-image inner-footer__logo-image--blue-mobile" width="147" height="40"><use xlink:href="#logo-pink-blue-mobile"></use></svg>
-        <svg class="inner-footer__logo-image inner-footer__logo-image--blue-desktop" width="147" height="40"><use xlink:href="#logo-pink-blue-desktop"></use></svg>
+        <svg class="inner-footer__logo-image" width="147" height="40"><use xlink:href="#logo-pink-blue"></use></svg>
       </a>
       <div class="inner-footer__social social">
         <ul class="social__list">
@@ -346,7 +350,7 @@
       </div>
       <div class="inner-footer__copyright copyright">
         <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">HTML Academy</span><svg class="copyright__icon" width="42" height="49"><use xlink:href="#htmlacademy"></use></svg></a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">HTML Academy</span><svg class="copyright__icon" width="27" height="34"><use xlink:href="#logo-htmlacademy"></use></svg></a>
       </div>
     </div>
   </footer>

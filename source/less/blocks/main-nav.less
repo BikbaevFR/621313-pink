@@ -1,7 +1,6 @@
 .main-nav {
   display: flex;
   flex-direction: column;
-  // width: 320px;
   width: 100%;
   margin: 0 auto;
 }
@@ -17,14 +16,12 @@
 }
 
 .main-nav__logo-link {
-  display: block;
+  // display: block;
   width: 75px;
   height: 22px;
 }
 
-.main-nav__logo-image {
-  display: none;
-
+.main-nav__logo-link .main-nav__logo-image {
   fill: @white;
 }
 
@@ -36,8 +33,19 @@
   fill: rgba(@white, 0.3);
 }
 
-.main-nav__logo-image--white-mobile {
-  display: block;
+.main-nav__logo-image {
+  width: 147px;
+  height: 40px;
+}
+
+.main-nav__logo-mobile {
+  display: inline-block;
+}
+
+.main-nav__logo-letters,
+.main-nav__logo-tablet-glasses,
+.main-nav__logo-desktop {
+  display: none;
 }
 
 .main-nav__toggle {
@@ -132,12 +140,13 @@
     margin-top: -18px;
   }
 
-  .main-nav__logo-image--white-mobile {
-    display: none;
+  .main-nav__logo-letters,
+  .main-nav__logo-tablet-glasses {
+    display: inline-block;
   }
 
-  .main-nav__logo-image--white-tablet {
-    display: block;
+  .main-nav__logo-mobile {
+    display: none;
   }
 
   .main-nav__toggle {
@@ -163,12 +172,12 @@
     background-color: transparent;
   }
 
-  .main-nav__logo-image--white-tablet {
-    display: none;
+  .main-nav__logo-desktop {
+    display: inline-block;
   }
 
-  .main-nav__logo-image--white-desktop {
-    display: block;
+  .main-nav__logo-tablet-glasses {
+    display: none;
   }
 
   .main-nav__toggle {

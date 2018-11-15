@@ -35,27 +35,38 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  margin-bottom: 77px;
+  margin-bottom: 80px;
 }
 
 .upload-photo__item--crop {
-  margin-left: 28px;
-  margin-right: 20px;
+  margin-left: 34px;
+  margin-right: 32px;
 }
 
 .upload-photo__item--fill {
-  margin-right: 27px;
+  margin-right: 32px;
 }
 
 .upload-photo__instrument {
-  position: relative;
+  // position: relative;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
   margin-bottom: 30px;
 
   background-color: transparent;
   border: none;
 
   cursor: pointer;
+}
+
+.upload-photo__instrument--contrast {
+  // width: 32px;
+  // height: 32px;
 }
 
 .upload-photo__item--active .upload-photo__instrument-icon {
@@ -106,7 +117,7 @@
 
 .upload-photo__item--active .upload-photo__range {
   position: absolute;
-  bottom: -5px;
+  bottom: -8px;
   left: 18px;
 
   display: block;
@@ -120,8 +131,9 @@
   .upload-photo__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 29px;
+    margin-bottom: 36px;
     padding: 55px 20px;
+    padding-bottom: 47px;
   }
 
   .upload-photo::after {
@@ -149,78 +161,85 @@
   }
 
   .upload-photo__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
     width: 275px;
     margin-right: 0;
     margin-left: auto;
-    padding-bottom: 34px;
-    padding-right: 20px;
     box-sizing: border-box;
 
     border-bottom: 1px solid #dddfe0;
   }
 
+  .upload-photo__item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 256px;
+  }
+
   .upload-photo__item--crop {
-    padding-top: 22px;
+    padding-top: 11px;
+    padding-bottom: 24px;
   }
 
   .upload-photo__item--fill {
-    padding-top: 36px;
+    padding-top: 27px;
+    padding-bottom: 24px;
   }
 
   .upload-photo__item--contrast {
-    padding-top: 32px;
+    padding-top: 23px;
+    padding-bottom: 23px;
   }
 
   .upload-photo__instrument {
-    position: relative;
+    height: 22px;
 
     margin-bottom: 0;
     padding: 0;
   }
 
-  .upload-photo__instrument-icon {
-    position: absolute;
+  .upload-photo__instrument--crop {
+    width: 24px;
+  }
 
+  .upload-photo__instrument--fill {
+    width: 30px;
+  }
+
+  .upload-photo__instrument--contrast {
+    width: 31px;
+  }
+
+  .upload-photo__instrument-icon {
     fill: @pink;
   }
 
   .upload-photo__instrument-icon--crop {
-    top: -12px;
-    left: 3px;
-
     width: 22px;
     height: 22px;
   }
 
   .upload-photo__instrument-icon--fill {
-    top: -9px;
-    left: 3px;
-
     width: 24px;
     height: 22px;
   }
 
   .upload-photo__instrument-icon--contrast {
-    top: -8px;
-    left: 8px;
-
     width: 16px;
     height: 16px;
   }
 
   .upload-photo__item--crop .upload-photo__range-toggle {
-    left: 74%;
+    left: 73%;
   }
 
   .upload-photo__item--fill .upload-photo__range-toggle {
-    left: 14%;
+    left: 13%;
   }
 
   .upload-photo__item--contrast .upload-photo__range-toggle {
-    left: 49%;
+    left: 48%;
   }
 
   .upload-photo__post {
@@ -254,9 +273,45 @@
     margin-bottom: 147px;
   }
 
+  .upload-photo__item-wrapper {
+    width: 379px;
+    margin: 0;
+  }
+
   .upload-photo__item {
     width: 100%;
     margin: 0;
+  }
+
+  .upload-photo__item--crop {
+    padding-top: 1px;
+    padding-bottom: 13px;
+  }
+
+  .upload-photo__item--fill {
+    padding-top: 14px;
+    padding-bottom: 10px;
+  }
+
+  .upload-photo__item--contrast {
+    padding-top: 18px;
+    padding-bottom: 19px;
+  }
+
+  .upload-photo__instrument--crop {
+    width: 44px;
+    height: 44px;
+  }
+
+  .upload-photo__instrument--fill {
+    width: 48px;
+    height: 48px;
+  }
+
+  .upload-photo__instrument--contrast {
+    width: 32px;
+    height: 32px;
+    margin-left: 5px;
   }
 
   .upload-photo__instrument-icon--crop {
@@ -272,20 +327,16 @@
     left: 0;
 
     width: 48px;
-    height: 43px;
+    height: 48px;
   }
 
   .upload-photo__instrument-icon--contrast {
-    top: -14px;
-    left: 5px;
-
     width: 32px;
     height: 32px;
   }
 
   .upload-photo__range {
-    width: 290px;
-    margin-right: 10px;
+    width: 288px;
   }
 
   .upload-photo__item--crop .upload-photo__range-toggle {

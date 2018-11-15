@@ -8,40 +8,45 @@
   border: none;
 }
 
+.form__block--legend {
+  padding-top: 46px;
+}
+
 .form__container {
   padding: 35px 0;
 }
 
 .form__container--fio {
-  padding-bottom: 41px;
+  padding-top: 34px;
+  padding-bottom: 42px;
 }
 
 .form__container--progress {
-  padding-bottom: 47px;
+  padding-bottom: 45px;
 
   background-color: @white--dark;
 }
 
 .form__container--contacts {
-  padding-top: 33px;
-  padding-bottom: 41px;
+  padding-top: 32px;
+  padding-bottom: 42px;
 }
 
 .form__container--os {
-  padding-bottom: 48px;
+  padding-bottom: 46px;
 
   background-color: @white--dark;
 }
 
 .form__container--emotions {
-  padding-bottom: 41px;
+  padding-bottom: 47px;
 }
 
 .form__block-title {
-  width: 230px;
-  margin: 0 auto;
+  width: 100%;
+  // margin: 0 auto;
+  padding: 0 20px;
   padding-top: 2px;
-  margin-bottom: 46px;
 
   line-height: 18px;
   text-transform: uppercase;
@@ -53,12 +58,16 @@
   display: none;
 }
 
-.form__block--os .form__block-title {
-  margin-bottom: 41px;
+.form__block--contacts {
+  padding-top: 0;
 }
 
-.form__block--emotions .form__block-title {
-  margin-bottom: 17px;
+.form__block--os {
+  padding-top: 41px;
+}
+
+.form__block--emotions {
+  padding-top: 17px;
 }
 
 .form__list {
@@ -98,7 +107,7 @@
 .form__text {
   width: 280px;
   min-height: 63px;
-  margin-top: 6px;
+  margin-top: 5px;
   padding-left: 20px;
   box-sizing: border-box;
 
@@ -150,11 +159,13 @@
   color: @blue-dark;
 }
 
-.form__text::-moz-placeholder {
+.form__text[type="text"]::-moz-placeholder,
+.form__text[type="email"]::-moz-placeholder,
+.form__text[type="tel"]::-moz-placeholder {
   font-family: @default-font;
   font-weight: 400;
   font-size: 18px;
-  line-height: 60px;
+  line-height: 57px;
   color: @blue-dark;
 }
 
@@ -184,14 +195,14 @@
   cursor: pointer;
 }
 
-.form__input--checkbox + .form__field:hover::before {
+.form__input--checkbox + .form__field:hover::before,
+.form__input--checkbox:focus + .form__field::before {
   border-color: @blue-dark;
 }
 
 .form__input--checkbox + .form__field:active::before {
   border-color: @pink;
 }
-
 
 .form__input--checkbox:checked + .form__field::after {
   content: "";
@@ -214,7 +225,6 @@
   &:hover,
   &:focus {
     border-color: @blue-dark;
-    outline: none;
   }
 
   &:active {
@@ -255,7 +265,8 @@
   cursor: pointer;
 }
 
-.form__input--radio + .form__field:hover::before {
+.form__input--radio + .form__field:hover::before,
+.form__input--radio:focus + .form__field::before {
   border-color: @blue-dark;
 }
 
@@ -269,7 +280,7 @@
 }
 
 .form__button {
-  margin-bottom: 36px;
+  margin-bottom: 34px;
 }
 
 .form__legend {
@@ -305,7 +316,7 @@
   .form__container--progress {
     order: 4;
     padding-top: 37px;
-    padding-bottom: 20px;
+    padding-bottom: 26px;
 
     background-color: @white;
   }
@@ -318,8 +329,8 @@
 
   .form__container--os {
     order: 2;
-    padding-top: 37px;
-    padding-bottom: 25px;
+    padding-top: 38px;
+    padding-bottom: 34px;
 
     background-color: @white;
   }
@@ -337,12 +348,17 @@
     border: 2px solid @gray-light;
   }
 
+  .form__block--legend {
+    padding-top: 38px;
+  }
+
   .form__block--fio {
     border: none;
   }
 
   .form__block-title {
-    padding-top: 0;
+    margin: 0 auto;
+    padding: 0;
 
     text-align: center;
   }
@@ -351,9 +367,12 @@
     display: block;
   }
 
+  .form__block--os {
+    padding-top: 40px;
+  }
+
   .form__container--os .form__block-title {
     width: 367px;
-    margin-bottom: 40px;
   }
 
   .form__block--os .form__item {
@@ -371,21 +390,18 @@
 
   .form__container--contacts .form__block-title {
     width: 260px;
-    margin-bottom: 38px;
   }
 
   .form__container--progress .form__block-title {
     width: 436px;
-    margin-bottom: 38px;
   }
 
   .form__container--emotions .form__block-title {
     width: 260px;
-    margin-bottom: 38px;
   }
 
   .form__container--os .form__list {
-    margin-bottom: 59px;
+    margin-bottom: 48px;
   }
 
   .form__list--wrapper {
@@ -408,11 +424,11 @@
     position: relative;
 
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
   }
 
   .form__block--contacts .form__item--phone {
-    margin-bottom: 26px;
+    margin-bottom: 29px;
   }
 
   .form__block--contacts .form__item::before {
@@ -444,7 +460,7 @@
   }
 
   .form__block--progress .form__item--last {
-    margin-bottom: 51px;
+    margin-bottom: 43px;
   }
 
   .form__input--checkbox + .form__field::before {
@@ -512,6 +528,7 @@
     width: 940px;
     margin: 0 auto;
     padding: 42px 10px;
+    padding-top: 40px;
   }
 
   .form__container {
@@ -522,11 +539,11 @@
 
   .form__container--fio {
     width: 435px;
-    padding-top: 8px;
+    padding-top: 9px;
   }
 
   .form__container--fio .form__item {
-    margin-bottom: 47px;
+    margin-bottom: 48px;
   }
 
   .form__container--fio .form__item:last-child {
@@ -537,13 +554,20 @@
     width: auto;
   }
 
+  .form__block--legend {
+    padding-top: 36px;
+  }
+
   .form__container--os {
     width: 436px;
   }
 
+  .form__block--os {
+    padding-top: 41px;
+  }
+
   .form__container--os .form__block-title {
     width: 368px;
-    margin-bottom: 41px;
   }
 
   .form__block--os .form__item {
@@ -551,16 +575,12 @@
   }
 
   .form__container--os .form__list {
-    margin-bottom: 60px;
+    margin-bottom: 48px;
   }
 
   .form__container--contacts {
     margin: 25px 0;
-    padding-top: 19px;
-  }
-
-  .form__container--contacts .form__block-title {
-    margin-bottom: 36px;
+    padding-top: 31px;
   }
 
   .form__list--contacts {
@@ -590,8 +610,8 @@
     padding-top: 31px;
   }
 
-  .form__container--progress .form__block-title {
-    margin-bottom: 40px;
+  .form__block--progress {
+    padding-top: 40px;
   }
 
   .form__list--progress {
@@ -599,26 +619,26 @@
     flex-direction: column;
     align-content: space-between;
     flex-wrap: wrap;
-    height: 172px;
+    height: 180px;
   }
 
   .form__list--progress .form__item {
     margin: 0;
-    margin-bottom: 33px;
+    margin-bottom: 31px;
     flex-shrink: 0;
   }
 
   .form__container--emotions {
-    margin-bottom: 26px;
-    padding-top: 41px;
+    margin-bottom: 65px;
+    padding-top: 32px;
   }
 
-  .form__container--emotions .form__block-title {
-    margin-bottom: 34px;
+  .form__block--emotions {
+    padding-top: 34px;
   }
 
   .form__block--emotions .form__text {
-    min-height: 127px;
+    min-height: 128px;
     margin-bottom: 44px;
   }
 
